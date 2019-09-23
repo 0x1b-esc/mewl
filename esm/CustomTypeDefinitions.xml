@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<types version="11.2.1" buildstamp="20190725050014">
+<types version="10.4.0" buildstamp="20190621220913">
   <type id="1" label="AppID" custom="F" indexed="T" datatype="0" description="Typically contains the Name of an application connecting to database but may be overloaded by some data sources with additional data." flowLocation="3" eventLocation="1">
     <subtype label="AppID" length="64" offset="0" datatype="string"/>
   </type>
@@ -753,6 +753,9 @@
   <type id="8388617" label="EventType" custom="T" indexed="T" datatype="0" description="" flowLocation="0" eventLocation="2">
     <subtype label="EventType" length="64" offset="0" datatype="string"/>
   </type>
+  <type id="8388618" label="ServiceName" custom="T" indexed="T" datatype="0" description="" flowLocation="0" eventLocation="8">
+    <subtype label="ServiceName" length="64" offset="0" datatype="string"/>
+  </type>
   <type id="8454151" label="des25" custom="T" indexed="T" datatype="7" description="" flowLocation="0" eventLocation="25">
     <subtype label="des25" length="128" offset="0" datatype="sstring"/>
   </type>
@@ -827,6 +830,9 @@
   </type>
   <type id="8454179" label="ParentCommandLine" custom="T" indexed="T" datatype="7" description="" flowLocation="0" eventLocation="26">
     <subtype label="ParentCommandLine" length="128" offset="0" datatype="sstring"/>
+  </type>
+  <type id="8454180" label="ScriptBlockText" custom="T" indexed="T" datatype="7" description="" flowLocation="0" eventLocation="25">
+    <subtype label="ScriptBlockText" length="128" offset="0" datatype="sstring"/>
   </type>
   <type id="8650753" label="EventID" custom="T" indexed="T" datatype="3" description="" flowLocation="0" eventLocation="1">
     <subtype label="EventID" length="64" offset="0" datatype="uint64"/>
