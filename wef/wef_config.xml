@@ -1,0 +1,71 @@
+<QueryList>
+  <Query Id="0" Path="Security">
+    <Select Path="Security">*[System[(EventID=5140)]] and *[EventData[Data[@Name="ShareName"]="\\*\ADMIN$"]]</Select>
+  </Query>
+  <Query Id="1" Path="Security">
+    <Select Path="Security">*[System[(EventID=5145)]] and *[EventData[Data[@Name="ShareName"]="\\*\IPC$"]]</Select>
+  </Query>
+  <Query Id="2" Path="Security">
+    <Select Path="Security">*[System[(EventID=5145)]] and *[EventData[Data[@Name="ShareName"]="\\*\SYSVOL"]]</Select>
+  </Query>
+  <Query Id="3" Path="Security">
+    <Select Path="Security">*[System[(EventID=5136)]] and *[EventData[Data[@Name="LDAPDisplayName"]="ntSecurityDescriptor"]]</Select>
+  </Query>
+  <Query Id="4" Path="Security">
+    <Select Path="Security">*[System[(EventID=4719)]] and *[EventData[Data[@Name="AuditpolicyChanges"]="removed"]]</Select>
+  </Query>
+  <Query Id="5" Path="Security">
+    <Select Path="Security">*[System[(EventID=4656)]]</Select>
+  </Query>
+  <Query Id="11" Path="Security">
+    <Select Path="Security">*[System[(EventID=4720)]]</Select>
+  </Query>
+<!--USB Plugin Events-->
+  <Query Id="14" Path="Security">
+    <Select Path="Security">*[System[(EventID=6416)]]</Select>
+    <Suppress Path="Security">*[EventData[Data[@Name="ClassName"]="SmartCard"]]</Suppress>
+    <Suppress Path="Security">*[EventData[Data[@Name="ClassName"]="PrintQueue"]]</Suppress>
+  </Query>
+  <Query Id="15" Path="Security">
+    <Select Path="Security">*[System[(EventID=4624)]]</Select>
+  </Query>
+  <Query Id="16" Path="Application">
+    <Select Path="Application">*[System[Provider[@Name='MsiInstaller'] and (EventID=1033 or EventID=1040)]]</Select>
+  </Query>
+  <Query Id="20" Path="System">
+    <Select Path="System">*[System[(EventID=7045)]]</Select>
+  </Query>
+  <Query Id="50" Path="Microsoft-Windows-Sysmon/Operational">
+    <Select Path="Microsoft-Windows-Sysmon/Operational">*[System[(EventID=8)]] and *[EventData[Data[@Name="TargetImage"]="C:\Windows\System32\lsass.exe"]]</Select>
+  </Query>
+  <Query Id="51" Path="Microsoft-Windows-Sysmon/Operational">
+    <Select Path="Microsoft-Windows-Sysmon/Operational">*[System[(EventID=1)]]</Select>
+  </Query>
+  <Query Id="52" Path="Microsoft-Windows-Sysmon/Operational">
+    <Select Path="Microsoft-Windows-Sysmon/Operational">*[System[(EventID=2)]]</Select>
+  </Query>
+  <Query Id="53" Path="Microsoft-Windows-Sysmon/Operational">
+    <Select Path="Microsoft-Windows-Sysmon/Operational">*[System[(EventID=3)]]</Select>
+  </Query>
+  <Query Id="54" Path="Microsoft-Windows-Sysmon/Operational">
+    <Select Path="Microsoft-Windows-Sysmon/Operational">*[System[(EventID=6)]]</Select>
+  </Query>
+  <Query Id="55" Path="Microsoft-Windows-Sysmon/Operational">
+    <Select Path="Microsoft-Windows-Sysmon/Operational">*[System[(EventID=7)]]</Select>
+  </Query>
+  <Query Id="56" Path="Microsoft-Windows-Sysmon/Operational">
+    <Select Path="Microsoft-Windows-Sysmon/Operational">*[System[(EventID=8)]]</Select>
+  </Query>
+  <Query Id="57" Path="Microsoft-Windows-Sysmon/Operational">
+    <Select Path="Microsoft-Windows-Sysmon/Operational">*[System[(EventID=12)]]</Select>
+  </Query>
+  <Query Id="58" Path="Microsoft-Windows-Sysmon/Operational">
+    <Select Path="Microsoft-Windows-Sysmon/Operational">*[System[(EventID=13)]]</Select>
+  </Query>
+  <Query Id="59" Path="Microsoft-Windows-Sysmon/Operational">
+    <Select Path="Microsoft-Windows-Sysmon/Operational">*[System[(EventID=22)]]</Select>
+  </Query>
+  <Query Id="70" Path="Microsoft-Windows-PowerShell/Operational">
+    <Select Path="Microsoft-Windows-PowerShell/Operational">*[System[(EventID=4104)]]</Select>
+  </Query>
+</QueryList>
