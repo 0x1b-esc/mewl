@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="utf-8"?>
+<nitro_policy esm="B5BF:C090" time="09/17/2019 20:16:56" user="NGCP" build="11.2.1 20190725050014" model="ETM-VM8" version="11002001">
+  <rules count="14">
+    <rule>
+      <id>5000003</id>
+      <normid>4026531840</normid>
+      <revision>0</revision>
+      <sid>0</sid>
+      <class>2</class>
+      <message>A new process has been created.</message>
+      <description/>
+      <origin>1</origin>
+      <severity>1</severity>
+      <type>1</type>
+      <action>5</action>
+      <action_initial>5</action_initial>
+      <action_disallowed>0</action_disallowed>
+      <other_bits_default>4</other_bits_default>
+      <other_bits_disallowed>0</other_bits_disallowed>
+      <text><![CDATA[any any any -> any any (msg:"A new process has been created.";adsid:777;content:"\"provider_name\":\"Microsoft-Windows-Security-Auditing\"";content:"\"event_id\":4688";json;var@{Channel}:${winlog.channel};var@{CommandLine,Image}:${winlog.event_data.NewProcessName};var@{EventID}:${event.code};var@{firsttime}:${event.created};var@{HostID}:${winlog.computer_name};var@{lasttime}:${@timestamp};var@{LogonId}:${winlog.event_data.SubjectLogonId};var@{ParentCommandLine,ParentImage}:${winlog.event_data.ParentProcessName};var@{ProcessID}:${winlog.event_data.NewProcessId};var@{session_id}:${winlog.event_data.TargetLogonId};var@{UserIDSrc}:${winlog.event_data.SubjectUserName};var@{ThreadID}:${winlog.process.thread.id};fmt@{firsttime, lasttime}:"%Y-%m-%dT%H:%M:%S%.3fZ";)]]></text>
+      <tag origin="1">MEWL</tag>
+    </rule>
+    <rule>
+      <id>5000004</id>
+      <normid>4026531840</normid>
+      <revision>0</revision>
+      <sid>0</sid>
+      <class>2</class>
+      <message>Process Create</message>
+      <description/>
+      <origin>1</origin>
+      <severity>1</severity>
+      <type>1</type>
+      <action>5</action>
+      <action_initial>5</action_initial>
+      <action_disallowed>0</action_disallowed>
+      <other_bits_default>4</other_bits_default>
+      <other_bits_disallowed>0</other_bits_disallowed>
+      <text><![CDATA[any any any -> any any (msg:"Process Create";adsid:777;content:"\"provider_name\":\"Microsoft-Windows-Sysmon\"";content:"\"event_id\":1,";json;var@{Channel}:${winlog.channel};var@{CommandLine}:${process.args};var@{Description_}:${winlog.event_data.Description};var@{EventID}:${event.code};var@{firsttime}:${@timestamp};var@{HostID}:${winlog.computer_name};var@{Image}:${process.executable};var@{ImageName}:${process.name};var@{Imphash}:${hash.imphash};var@{IntegrityLevel}:${winlog.event_data.IntegrityLevel};var@{lasttime}:${event.created};var@{ParentCommandLine}:${process.parent.args};var@{ParentImage}:${process.parent.executable};var@{ParentName}:${process.parent.name};var@{Product}:${winlog.event_data.Product};var@{session_id}:${winlog.event_data.LogonId};var@{SHA256}:${hash.sha256};var@{UserIDSrc}:${user.name};fmt@{firsttime, lasttime}:"%Y-%m-%dT%H:%M:%S%.3fZ";)]]></text>
+      <tag origin="1">MEWL</tag>
+    </rule>
+    <rule>
+      <id>5000005</id>
+      <normid>4026531840</normid>
+      <revision>0</revision>
+      <sid>0</sid>
+      <class>2</class>
+      <message>CreateRemoteThread detected</message>
+      <description/>
+      <origin>1</origin>
+      <severity>1</severity>
+      <type>1</type>
+      <action>5</action>
+      <action_initial>5</action_initial>
+      <action_disallowed>0</action_disallowed>
+      <other_bits_default>4</other_bits_default>
+      <other_bits_disallowed>0</other_bits_disallowed>
+      <text><![CDATA[any any any -> any any (msg:"CreateRemoteThread detected";adsid:777;content:"\"task\":\"CreateRemoteThread detected (rule: CreateRemoteThread)\"";content:"\"provider_name\":\"Microsoft-Windows-Sysmon\"";content:"\"event_id\":8";json;var@{Channel}:${winlog.channel};var@{EventID}:${winlog.event_id};var@{firsttime}:${@timestamp};var@{HostID}:${winlog.computer_name};var@{Image}:${winlog.event_data.TargetImage};var@{lasttime}:${event.created};var@{ParentImage}:${process.executable};var@{ParentName}:${process.name};var@{StartAddress}:${winlog.event_data.StartAddress};fmt@{firsttime, lasttime}:"%Y-%m-%dT%H:%M:%S%.3fZ";)]]></text>
+      <tag origin="1">MEWL</tag>
+    </rule>
+    <rule>
+      <id>5000006</id>
+      <normid>4026531840</normid>
+      <revision>0</revision>
+      <sid>0</sid>
+      <class>2</class>
+      <message>Network connection detected</message>
+      <description/>
+      <origin>1</origin>
+      <severity>1</severity>
+      <type>1</type>
+      <action>5</action>
+      <action_initial>5</action_initial>
+      <action_disallowed>0</action_disallowed>
+      <other_bits_default>4</other_bits_default>
+      <other_bits_disallowed>0</other_bits_disallowed>
+      <text><![CDATA[any any any -> any any (msg:"Network connection detected";adsid:777;content:"\"channel\":\"Microsoft-Windows-Sysmon/Operational\"";content:"\"event_id\":3";content:"\"task\":\"Network connection detected (rule: NetworkConnect)\"";json;var@{Channel}:${winlog.channel};var@{dst_ip}:${destination.ip};var@{dst_port}:${destination.port};var@{EventID}:${winlog.event_id};var@{firsttime}:${@timestamp};var@{HostID}:${winlog.computer_name};var@{Image}:${process.executable};var@{ImageName}:${process.name};var@{lasttime}:${event.created};var@{protocol}:${network.transport};var@{src_ip}:${source.ip};var@{src_port}:${source.port};var@{UserIDSrc}:${user.name};fmt@{firsttime, lasttime}:"%Y-%m-%dT%H:%M:%S%.3fZ";)]]></text>
+      <tag origin="1">MEWL</tag>
+    </rule>
+    <rule>
+      <id>5000007</id>
+      <normid>4026531840</normid>
+      <revision>0</revision>
+      <sid>0</sid>
+      <class>2</class>
+      <message>Registry value set</message>
+      <description/>
+      <origin>1</origin>
+      <severity>1</severity>
+      <type>1</type>
+      <action>5</action>
+      <action_initial>5</action_initial>
+      <action_disallowed>0</action_disallowed>
+      <other_bits_default>4</other_bits_default>
+      <other_bits_disallowed>0</other_bits_disallowed>
+      <text><![CDATA[any any any -> any any (msg:"Registry value set";adsid:777;content:"\"channel\":\"Microsoft-Windows-Sysmon/Operational\"";content:"\"task\":\"Registry value set (rule: RegistryEvent)\"";content:"\"event_id\":13";json;var@{Channel}:${winlog.channel};var@{EventID}:${winlog.event_id};var@{EventType}:${winlog.event_data.EventType};var@{firsttime}:${@timestamp};var@{HostID}:${winlog.computer_name};var@{Image,Registry.Key}:${winlog.event_data.TargetObject};var@{lasttime}:${event.created};var@{Registry.Value}:${winlog.event_data.Details};var@{UserIDSrc}:${winlog.user.name};fmt@{firsttime, lasttime}:"%Y-%m-%dT%H:%M:%S%.3fZ";)]]></text>
+      <tag origin="1">MEWL</tag>
+    </rule>
+    <rule>
+      <id>5000008</id>
+      <normid>4026531840</normid>
+      <revision>0</revision>
+      <sid>0</sid>
+      <class>2</class>
+      <message>File created</message>
+      <description/>
+      <origin>1</origin>
+      <severity>1</severity>
+      <type>1</type>
+      <action>5</action>
+      <action_initial>5</action_initial>
+      <action_disallowed>0</action_disallowed>
+      <other_bits_default>4</other_bits_default>
+      <other_bits_disallowed>0</other_bits_disallowed>
+      <text><![CDATA[any any any -> any any (msg:"File created";adsid:777;content:"\"event_id\":11";content:"\"task\":\"File created (rule: FileCreate)\"";content:"\"channel\":\"Microsoft-Windows-Sysmon/Operational\"";json;var@{Channel}:${winlog.channel};var@{EventID}:${winlog.event_id};var@{Filename}:${file.path};var@{firsttime}:${@timestamp};var@{HostID}:${winlog.computer_name};var@{Image}:${process.executable};var@{ImageName}:${process.name};var@{lasttime}:${event.created};var@{RuleName}:${winlog.event_data.RuleName};var@{UserIDSrc}:${winlog.user.name};fmt@{firsttime, lasttime}:"%Y-%m-%dT%H:%M:%S%.3fZ";)]]></text>
+      <tag origin="1">MEWL</tag>
+    </rule>
+    <rule>
+      <id>5000009</id>
+      <normid>4026531840</normid>
+      <revision>0</revision>
+      <sid>0</sid>
+      <class>2</class>
+      <message>Driver loaded</message>
+      <description/>
+      <origin>1</origin>
+      <severity>1</severity>
+      <type>1</type>
+      <action>5</action>
+      <action_initial>5</action_initial>
+      <action_disallowed>0</action_disallowed>
+      <other_bits_default>4</other_bits_default>
+      <other_bits_disallowed>0</other_bits_disallowed>
+      <text><![CDATA[any any any -> any any (msg:"Driver loaded";adsid:777;content:"\"channel\":\"Microsoft-Windows-Sysmon/Operational\"";content:"\"event_id\":6";content:"\"action\":\"Driver loaded (rule: DriverLoad)\"";json;var@{Channel}:${winlog.channel};var@{Description_}:${winlog.event_data.Signature};var@{EventID}:${event.code};var@{firsttime}:${@timestamp};var@{HostID}:${winlog.computer_name};var@{Image}:${file.path};var@{lasttime}:${event.created};var@{MD5}:${hash.md5};var@{SHA256}:${hash.sha256};var@{UserIDSrc}:${winlog.user.name};fmt@{firsttime, lasttime}:"%Y-%m-%dT%H:%M:%S%.3fZ";)]]></text>
+      <tag origin="1">MEWL</tag>
+    </rule>
+    <rule>
+      <id>5000010</id>
+      <normid>4026531840</normid>
+      <revision>0</revision>
+      <sid>0</sid>
+      <class>2</class>
+      <message>Dns query</message>
+      <description/>
+      <origin>1</origin>
+      <severity>1</severity>
+      <type>1</type>
+      <action>5</action>
+      <action_initial>5</action_initial>
+      <action_disallowed>0</action_disallowed>
+      <other_bits_default>4</other_bits_default>
+      <other_bits_disallowed>0</other_bits_disallowed>
+      <text><![CDATA[any any any -> any any (msg:"Dns query";adsid:777;content:"\"channel\":\"Microsoft-Windows-Sysmon/Operational\"";content:"\"event_id\":22";content:"\"task\":\"Dns query (rule: DnsQuery)\"";json;var@{DNS.Query}:${winlog.event_data.QueryName};var@{DNS.Response_Code}:${winlog.event_data.QueryStatus};var@{DNS.Response_Code_Name}:${winlog.event_data.QueryResults};var@{EventID}:${event.code};var@{firsttime}:${@timestamp};var@{HostID}:${winlog.computer_name};var@{Image}:${process.executable};var@{lasttime}:${event.created};var@{UserIDSrc}:${winlog.user.name};fmt@{firsttime, lasttime}:"%Y-%m-%dT%H:%M:%S%.3fZ";)]]></text>
+      <tag origin="1">MEWL</tag>
+    </rule>
+    <rule>
+      <id>5000011</id>
+      <normid>4026531840</normid>
+      <revision>0</revision>
+      <sid>0</sid>
+      <class>2</class>
+      <message>Registry object added or deleted</message>
+      <description/>
+      <origin>1</origin>
+      <severity>1</severity>
+      <type>1</type>
+      <action>5</action>
+      <action_initial>5</action_initial>
+      <action_disallowed>0</action_disallowed>
+      <other_bits_default>4</other_bits_default>
+      <other_bits_disallowed>0</other_bits_disallowed>
+      <text><![CDATA[any any any -> any any (msg:"Registry object added or deleted";adsid:777;content:"\"task\":\"Registry object added or deleted (rule: RegistryEvent)\"";content:"\"event_id\":12";content:"\"channel\":\"Microsoft-Windows-Sysmon/Operational\"";json;var@{Channel}:${winlog.channel};var@{EventID}:${event.code};var@{EventType}:${winlog.event_data.EventType};var@{firsttime}:${@timestamp};var@{HostID}:${winlog.computer_name};var@{Image}:${process.executable};var@{ImageName}:${process.name};var@{lasttime}:${event.created};var@{Registry.Key}:${winlog.event_data.TargetObject};var@{UserIDSrc}:${winlog.user.name};fmt@{firsttime, lasttime}:"%Y-%m-%dT%H:%M:%S%.3fZ";)]]></text>
+      <tag origin="1">MEWL</tag>
+    </rule>
+    <rule>
+      <id>5000012</id>
+      <normid>4026531840</normid>
+      <revision>0</revision>
+      <sid>0</sid>
+      <class>2</class>
+      <message>File creation time changed</message>
+      <description/>
+      <origin>1</origin>
+      <severity>1</severity>
+      <type>1</type>
+      <action>5</action>
+      <action_initial>5</action_initial>
+      <action_disallowed>0</action_disallowed>
+      <other_bits_default>4</other_bits_default>
+      <other_bits_disallowed>0</other_bits_disallowed>
+      <text><![CDATA[any any any -> any any (msg:"File creation time changed";adsid:777;content:"\"task\":\"File creation time changed (rule: FileCreateTime)\"";content:"\"event_id\":2";content:"\"channel\":\"Microsoft-Windows-Sysmon/Operational\"";json;var@{Channel}:${winlog.channel};var@{CurrentCreationTime}:${winlog.event_data.CreationUtcTime};var@{EventID}:${event.code};var@{Filename}:${file.path};var@{firsttime}:${@timestamp};var@{HostID}:${winlog.computer_name};var@{Image}:${process.executable};var@{ImageName}:${process.name};var@{lasttime}:${event.created};var@{PreviousCreationTime}:${winlog.event_data.PreviousCreationUtcTime};fmt@{firsttime, lasttime}:"%Y-%m-%dT%H:%M:%S%.3fZ";fmt@{PreviousCreationTime, CurrentCreationTime}:"%Y-%m-%d %H:%M:%S%.3f";)]]></text>
+      <tag origin="1">MEWL</tag>
+    </rule>
+    <rule>
+      <id>5000013</id>
+      <normid>4026531840</normid>
+      <revision>0</revision>
+      <sid>0</sid>
+      <class>2</class>
+      <message>An attempt was made to access an object.</message>
+      <description/>
+      <origin>1</origin>
+      <severity>1</severity>
+      <type>1</type>
+      <action>5</action>
+      <action_initial>5</action_initial>
+      <action_disallowed>0</action_disallowed>
+      <other_bits_default>4</other_bits_default>
+      <other_bits_disallowed>0</other_bits_disallowed>
+      <text><![CDATA[any any any -> any any (msg:"An attempt was made to access an object.";adsid:777;content:"\"task\":\"Removable Storage\"";content:"\"channel\":\"Security\"";content:"\"event_id\":4663";json;var@{Channel}:${winlog.channel};var@{EventID}:${event.code};var@{EventType}:${winlog.event_data.ObjectType};var@{Filename}:${winlog.event_data.ObjectName};var@{firsttime}:${@timestamp};var@{HostID}:${winlog.computer_name};var@{Image}:${winlog.event_data.ProcessName};var@{lasttime}:${event.created};var@{UserIDSrc}:${winlog.event_data.SubjectUserName};fmt@{firsttime, lasttime}:"%Y-%m-%dT%H:%M:%S%.3fZ";)]]></text>
+      <tag origin="1">MEWL</tag>
+    </rule>
+    <rule>
+      <id>5000014</id>
+      <normid>4026531840</normid>
+      <revision>0</revision>
+      <sid>0</sid>
+      <class>2</class>
+      <message>Event Forwarder Message</message>
+      <description/>
+      <origin>1</origin>
+      <severity>1</severity>
+      <type>1</type>
+      <action>5</action>
+      <action_initial>5</action_initial>
+      <action_disallowed>0</action_disallowed>
+      <other_bits_default>4</other_bits_default>
+      <other_bits_disallowed>0</other_bits_disallowed>
+      <text><![CDATA[any any any -> any any (msg:"Event Forwarder Message";adsid:777;content:"\"code\":111";content:"\"provider_name\":\"Microsoft-Windows-EventForwarder\"";json;var@{EventID}:${event.code};var@{firsttime}:${@timestamp};var@{HostID}:${winlog.computer_name};var@{lasttime}:${event.created};fmt@{firsttime, lasttime}:"%Y-%m-%dT%H:%M:%S%.3fZ";)]]></text>
+      <tag origin="1">MEWL</tag>
+    </rule>
+    <rule>
+      <id>5000015</id>
+      <normid>4026531840</normid>
+      <revision>0</revision>
+      <sid>0</sid>
+      <class>2</class>
+      <message>An object was deleted</message>
+      <description/>
+      <origin>1</origin>
+      <severity>1</severity>
+      <type>1</type>
+      <action>5</action>
+      <action_initial>5</action_initial>
+      <action_disallowed>0</action_disallowed>
+      <other_bits_default>4</other_bits_default>
+      <other_bits_disallowed>0</other_bits_disallowed>
+      <text><![CDATA[any any any -> any any (msg:"An object was deleted";adsid:777;content:"\"task\":\"Removable Storage\"";content:"\"event_id\":4660";content:"\"channel\":\"Security\"";json;var@{EventID}:${event.code};var@{firsttime}:${@timestamp};var@{HostID}:${winlog.computer_name};var@{Image}:${winlog.event_data.ProcessName};var@{lasttime}:${event.created};var@{UserIDSrc}:${winlog.event_data.SubjectUserName};fmt@{firsttime, lasttime}:"%Y-%m-%dT%H:%M:%S%.3fZ";)]]></text>
+      <tag origin="1">MEWL</tag>
+    </rule>
+    <rule>
+      <id>5000016</id>
+      <normid>4026531840</normid>
+      <revision>0</revision>
+      <sid>0</sid>
+      <class>2</class>
+      <message>An account failed to log on</message>
+      <description/>
+      <origin>1</origin>
+      <severity>1</severity>
+      <type>1</type>
+      <action>5</action>
+      <action_initial>5</action_initial>
+      <action_disallowed>0</action_disallowed>
+      <other_bits_default>4</other_bits_default>
+      <other_bits_disallowed>0</other_bits_disallowed>
+      <text><![CDATA[any any any -> any any (msg:"An account failed to log on";adsid:777;content:"\"task\":\"Logon\"";content:"\"channel\":\"Security\"";content:"\"event_id\":4625";json;var@{EventID}:${event.code};var@{firsttime}:${@timestamp};var@{HostID}:${winlog.computer_name};var@{Image}:${process.executable};var@{ImageName}:${process.name};var@{lasttime}:${event.created};var@{src_ip}:${source.ip};var@{src_port}:${source.port};var@{UserIDSrc}:${user.name};fmt@{firsttime, lasttime}:"%Y-%m-%dT%H:%M:%S%.3fZ";)]]></text>
+      <tag origin="1">MEWL</tag>
+    </rule>
+  </rules>
+  <variables count="0"/>
+  <policies count="1" export_mode="0">
+    <policy>
+      <name>winevents</name>
+      <uid>6737797877361694986</uid>
+      <alerts_only>2</alerts_only>
+      <exceptions_var count="0"/>
+      <exceptions_preprocess count="0"/>
+      <exceptions_rule count="0"/>
+    </policy>
+  </policies>
+</nitro_policy>

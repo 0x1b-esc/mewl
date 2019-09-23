@@ -1,0 +1,849 @@
+<?xml version="1.0" encoding="utf-8"?>
+<types version="11.2.1" buildstamp="20190725050014">
+  <type id="1" label="AppID" custom="F" indexed="T" datatype="0" description="Typically contains the Name of an application connecting to database but may be overloaded by some data sources with additional data." flowLocation="3" eventLocation="1">
+    <subtype label="AppID" length="64" offset="0" datatype="string"/>
+  </type>
+  <type id="2" label="CommandID" custom="F" indexed="T" datatype="0" description="Typically contains an SQL command name such as GRANT, SELECT, INSERT, etc but may be overloaded by some data sources with additional data." flowLocation="0" eventLocation="2">
+    <subtype label="CommandID" length="64" offset="0" datatype="string"/>
+  </type>
+  <type id="3" label="DomainID" custom="F" indexed="T" datatype="0" description="Typically contains a Domain name but may be overloaded by some data sources with additional data." flowLocation="0" eventLocation="3">
+    <subtype label="DomainID" length="64" offset="0" datatype="string"/>
+  </type>
+  <type id="4" label="HostID" custom="F" indexed="T" datatype="0" description="Typically contains a Host name but may be overloaded by some data sources with additional data." flowLocation="0" eventLocation="4">
+    <subtype label="HostID" length="64" offset="0" datatype="string"/>
+  </type>
+  <type id="5" label="ObjectID" custom="F" indexed="T" datatype="0" description="Typically contains a Table name or Stored procedure name but may be overloaded by some data sources with additional data." flowLocation="0" eventLocation="5">
+    <subtype label="ObjectID" length="64" offset="0" datatype="string"/>
+  </type>
+  <type id="6" label="UserIDDst" custom="F" indexed="T" datatype="0" description="Typically contains a DB authentication username but may be overloaded by some data sources with additional data." flowLocation="1" eventLocation="6">
+    <subtype label="UserIDDst" length="64" offset="0" datatype="string"/>
+  </type>
+  <type id="7" label="UserIDSrc" custom="F" indexed="T" datatype="0" description="Typically contains an OS authentication username but may be overloaded by some data sources with additional data." flowLocation="2" eventLocation="7">
+    <subtype label="UserIDSrc" length="64" offset="0" datatype="string"/>
+  </type>
+  <type id="8" label="Database_Name" custom="F" indexed="T" datatype="0" description="Typically contains a Name of a database but may be overloaded by some data sources with additional data." flowLocation="0" eventLocation="8">
+    <subtype label="Database_Name" length="64" offset="0" datatype="string"/>
+  </type>
+  <type id="9" label="Application_Protocol" custom="F" indexed="T" datatype="0" description="Typically contains an application protocol but may be overloaded by some data sources with additional data." flowLocation="0" eventLocation="1">
+    <subtype label="Application_Protocol" length="64" offset="0" datatype="string"/>
+  </type>
+  <type id="10" label="Object_Type" custom="F" indexed="T" datatype="0" description="Typically contains the Type of an Object/file but may be overloaded by some data sources with additional data." flowLocation="0" eventLocation="2">
+    <subtype label="Object_Type" length="64" offset="0" datatype="string"/>
+  </type>
+  <type id="11" label="Method" custom="F" indexed="T" datatype="0" description="Typically contains an HTTP or FTP transfer method, (eg. GET, POST, STOR or RET) but may be overloaded by some data sources with additional data." flowLocation="0" eventLocation="5">
+    <subtype label="Method" length="64" offset="0" datatype="string"/>
+  </type>
+  <type id="12" label="File_Operation" custom="F" indexed="T" datatype="0" description="Typically contains a file operation, (eg. Create, Open, Delete, etc) but may be overloaded by some data sources with additional data." flowLocation="0" eventLocation="5">
+    <subtype label="File_Operation" length="64" offset="0" datatype="string"/>
+  </type>
+  <type id="13" label="File_Operation_Succeeded" custom="F" indexed="T" datatype="0" description="Typically contains a string describing whether a file operation succeeded (True, False) but may be overloaded by some data sources with additional data." flowLocation="0" eventLocation="6">
+    <subtype label="File_Operation_Succeeded" length="64" offset="0" datatype="string"/>
+  </type>
+  <type id="14" label="User_Nickname" custom="F" indexed="T" datatype="0" description="Typically contains an instant messaging user's nickname but may be overloaded by some data sources with additional data." flowLocation="0" eventLocation="5">
+    <subtype label="User_Nickname" length="64" offset="0" datatype="string"/>
+  </type>
+  <type id="15" label="Contact_Name" custom="F" indexed="T" datatype="0" description="Typically contains an instant messaging contact username but may be overloaded by some data sources with additional data." flowLocation="0" eventLocation="6">
+    <subtype label="Contact_Name" length="64" offset="0" datatype="string"/>
+  </type>
+  <type id="16" label="Contact_Nickname" custom="F" indexed="T" datatype="0" description="Typically contains an instant Messaging contact nickname but may be overloaded by some data sources with additional data." flowLocation="0" eventLocation="8">
+    <subtype label="Contact_Nickname" length="64" offset="0" datatype="string"/>
+  </type>
+  <type id="17" label="DNS_Type" custom="F" indexed="T" datatype="0" description="Typically contains the Type of a DNS record but may be overloaded by some data sources with additional data." flowLocation="0" eventLocation="6">
+    <subtype label="DNS_Type" length="64" offset="0" datatype="string"/>
+  </type>
+  <type id="18" label="DNS_Class" custom="F" indexed="T" datatype="0" description="Typically contains the Class of a DNS record but may be overloaded by some data sources with additional data." flowLocation="0" eventLocation="8">
+    <subtype label="DNS_Class" length="64" offset="0" datatype="string"/>
+  </type>
+  <type id="19" label="Query_Response" custom="F" indexed="T" datatype="0" description="Typically contains the DNS record of a query response but may be overloaded by some data sources with additional data." flowLocation="0" eventLocation="9">
+    <subtype label="Query_Response" length="64" offset="0" datatype="string"/>
+  </type>
+  <type id="20" label="Authoritative_Answer" custom="F" indexed="T" datatype="0" description="Typically contains a DNS response that is authoritative but may be overloaded by some data sources with additional data." flowLocation="0" eventLocation="10">
+    <subtype label="Authoritative_Answer" length="64" offset="0" datatype="string"/>
+  </type>
+  <type id="21" label="SNMP_Operation" custom="F" indexed="T" datatype="0" description="Typically contains an SNMP operation but may be overloaded by some data sources with additional data." flowLocation="0" eventLocation="5">
+    <subtype label="SNMP_Operation" length="64" offset="0" datatype="string"/>
+  </type>
+  <type id="22" label="SNMP_Item_Type" custom="F" indexed="T" datatype="0" description="Typically contains the Type of an SNMP item but may be overloaded by some data sources with additional data." flowLocation="0" eventLocation="8">
+    <subtype label="SNMP_Item_Type" length="64" offset="0" datatype="string"/>
+  </type>
+  <type id="23" label="SNMP_Version" custom="F" indexed="T" datatype="0" description="Typically contains an SNMP Version but may be overloaded by some data sources with additional data." flowLocation="0" eventLocation="9">
+    <subtype label="SNMP_Version" length="64" offset="0" datatype="string"/>
+  </type>
+  <type id="24" label="SNMP_Error_Code" custom="F" indexed="T" datatype="0" description="Typically contains an SNMP error code but may be overloaded by some data sources with additional data." flowLocation="0" eventLocation="10">
+    <subtype label="SNMP_Error_Code" length="64" offset="0" datatype="string"/>
+  </type>
+  <type id="25" label="NTP_Client_Mode" custom="F" indexed="T" datatype="0" description="Typically contains the Network Time Protocol Mode of a Client but may be overloaded by some data sources with additional data." flowLocation="0" eventLocation="5">
+    <subtype label="NTP_Client_Mode" length="64" offset="0" datatype="string"/>
+  </type>
+  <type id="26" label="NTP_Server_Mode" custom="F" indexed="T" datatype="0" description="Typically contains the Network Time Protocol Mode of a Server but may be overloaded by some data sources with additional data." flowLocation="0" eventLocation="6">
+    <subtype label="NTP_Server_Mode" length="64" offset="0" datatype="string"/>
+  </type>
+  <type id="27" label="NTP_Request" custom="F" indexed="T" datatype="0" description="Typically contains the text of a Network Time Protocol Request but may be overloaded by some data sources with additional data." flowLocation="0" eventLocation="9">
+    <subtype label="NTP_Request" length="64" offset="0" datatype="string"/>
+  </type>
+  <type id="28" label="NTP_Opcode" custom="F" indexed="T" datatype="0" description="Typically contains a Network Time Protocol Opcode but may be overloaded by some data sources with additional data." flowLocation="0" eventLocation="10">
+    <subtype label="NTP_Opcode" length="64" offset="0" datatype="string"/>
+  </type>
+  <type id="29" label="Interface" custom="F" indexed="T" datatype="0" description="Typically contains the ID or name of an interface but may be overloaded by some data sources with additional data." flowLocation="5" eventLocation="8">
+    <subtype label="Interface" length="64" offset="0" datatype="string"/>
+  </type>
+  <type id="30" label="Direction" custom="F" indexed="T" datatype="0" description="Typically contains the Direction of network traffic (eg. 'inbound', 'outbound' 'bidirectional' etc.) but may be overloaded by some data sources with additional data." flowLocation="0" eventLocation="10">
+    <subtype label="Direction" length="64" offset="0" datatype="string"/>
+  </type>
+  <type id="31" label="Sensor_Name" custom="F" indexed="T" datatype="0" description="Typically contains the Name of a security appliance but may be overloaded by some data sources with additional data." flowLocation="0" eventLocation="8">
+    <subtype label="Sensor_Name" length="64" offset="0" datatype="string"/>
+  </type>
+  <type id="32" label="Sensor_Type" custom="F" indexed="T" datatype="0" description="Typically contains the Type of a security appliance but may be overloaded by some data sources with additional data." flowLocation="0" eventLocation="10">
+    <subtype label="Sensor_Type" length="64" offset="0" datatype="string"/>
+  </type>
+  <type id="33" label="Response_Code" custom="F" indexed="T" datatype="0" description="Typically contains an HTTP response code but may be overloaded by some data sources with additional data." flowLocation="0" eventLocation="10">
+    <subtype label="Response_Code" length="64" offset="0" datatype="string"/>
+  </type>
+  <type id="34" label="Return_Code" custom="F" indexed="T" datatype="0" description="Typically contains an HTTP return code but may be overloaded by some data sources with additional data." flowLocation="0" eventLocation="10">
+    <subtype label="Return_Code" length="64" offset="0" datatype="string"/>
+  </type>
+  <type id="65537" label="Signature_Name" custom="F" indexed="T" datatype="7" description="Typically contains the Name of a signature (usually sent from an IPS or IDS device) but may be overloaded by some data sources with additional data." flowLocation="0" eventLocation="24">
+    <subtype label="Signature_Name" length="128" offset="0" datatype="sstring"/>
+  </type>
+  <type id="65538" label="Threat_Name" custom="F" indexed="T" datatype="7" description="Typically contains the Name of a threat identified by a security appliance but may be overloaded by some data sources with additional data." flowLocation="0" eventLocation="26">
+    <subtype label="Threat_Name" length="128" offset="0" datatype="sstring"/>
+  </type>
+  <type id="65539" label="Destination_Hostname" custom="F" indexed="T" datatype="7" description="Typically contains a Hostname of destination device but may be overloaded by some data sources with additional data." flowLocation="0" eventLocation="21">
+    <subtype label="Destination_Hostname" length="128" offset="0" datatype="sstring"/>
+  </type>
+  <type id="65540" label="Category" custom="F" indexed="T" datatype="7" description="Typically contains the Category type of an event but may be overloaded by some data sources with additional data." flowLocation="0" eventLocation="25">
+    <subtype label="Category" length="128" offset="0" datatype="sstring"/>
+  </type>
+  <type id="65541" label="Source_Zone" custom="F" indexed="T" datatype="7" description="Typically contains the Zone of a source device but may be overloaded by some data sources with additional data." flowLocation="0" eventLocation="21">
+    <subtype label="Source_Zone" length="128" offset="0" datatype="sstring"/>
+  </type>
+  <type id="65542" label="Destination_Zone" custom="F" indexed="T" datatype="7" description="Typically contains the Zone of a destination device but may be overloaded by some data sources with additional data." flowLocation="0" eventLocation="22">
+    <subtype label="Destination_Zone" length="128" offset="0" datatype="sstring"/>
+  </type>
+  <type id="65543" label="Target_Class" custom="F" indexed="T" datatype="7" description="Typically contains the Class of a syslog message but may be overloaded by some data sources with additional data." flowLocation="0" eventLocation="27">
+    <subtype label="Target_Class" length="128" offset="0" datatype="sstring"/>
+  </type>
+  <type id="65544" label="Policy_Name" custom="F" indexed="T" datatype="7" description="Typically contains the Name of a policy as reported by a security appliance but may be overloaded by some data sources with additional data." flowLocation="0" eventLocation="23">
+    <subtype label="Policy_Name" length="128" offset="0" datatype="sstring"/>
+  </type>
+  <type id="65545" label="Event_Class" custom="F" indexed="T" datatype="7" description="Typically contains the Class of an event but may be overloaded by some data sources with additional data." flowLocation="0" eventLocation="21">
+    <subtype label="Event_Class" length="128" offset="0" datatype="sstring"/>
+  </type>
+  <type id="65546" label="Request_Type" custom="F" indexed="T" datatype="7" description="Typically contains the Type of request made by a network entity, (eg. ICMP, TCP, etc.) but may be overloaded by some data sources with additional data." flowLocation="0" eventLocation="24">
+    <subtype label="Request_Type" length="128" offset="0" datatype="sstring"/>
+  </type>
+  <type id="65547" label="Message_ID" custom="F" indexed="T" datatype="7" description="Typically contains the ID of an e-mail message or log message but may be overloaded by some data sources with additional data." flowLocation="0" eventLocation="22">
+    <subtype label="Message_ID" length="128" offset="0" datatype="sstring"/>
+  </type>
+  <type id="65548" label="Mail_ID" custom="F" indexed="T" datatype="7" description="Typically contains the ID of an E-mail but may be overloaded by some data sources with additional data." flowLocation="0" eventLocation="21">
+    <subtype label="Mail_ID" length="128" offset="0" datatype="sstring"/>
+  </type>
+  <type id="65549" label="Recipient_ID" custom="F" indexed="T" datatype="7" description="Typically contains the Recipient ID of an e-mail but may be overloaded by some data sources with additional data." flowLocation="0" eventLocation="23">
+    <subtype label="Recipient_ID" length="128" offset="0" datatype="sstring"/>
+  </type>
+  <type id="65550" label="Delivery_ID" custom="F" indexed="T" datatype="7" description="Typically contains the Delivery ID of an e-mail but may be overloaded by some data sources with additional data." flowLocation="0" eventLocation="26">
+    <subtype label="Delivery_ID" length="128" offset="0" datatype="sstring"/>
+  </type>
+  <type id="65551" label="Creator_Name" custom="F" indexed="T" datatype="7" description="Typically contains a Username or reported name of a user who created a file but may be overloaded by some data sources with additional data." flowLocation="0" eventLocation="24">
+    <subtype label="Creator_Name" length="128" offset="0" datatype="sstring"/>
+  </type>
+  <type id="65552" label="External_Application" custom="F" indexed="T" datatype="7" description="Typically contains the Name of an external application but may be overloaded by some data sources with additional data." flowLocation="0" eventLocation="25">
+    <subtype label="External_Application" length="128" offset="0" datatype="sstring"/>
+  </type>
+  <type id="65553" label="External_DB2_Server" custom="F" indexed="T" datatype="7" description="Typically contains the Name of an external DB2 Server but may be overloaded by some data sources with additional data." flowLocation="0" eventLocation="26">
+    <subtype label="External_DB2_Server" length="128" offset="0" datatype="sstring"/>
+  </type>
+  <type id="65554" label="Table_Name" custom="F" indexed="T" datatype="7" description="Typically contains the Name of a table but may be overloaded by some data sources with additional data." flowLocation="0" eventLocation="23">
+    <subtype label="Table_Name" length="128" offset="0" datatype="sstring"/>
+  </type>
+  <type id="65555" label="Access_Resource" custom="F" indexed="T" datatype="7" description="Typically contains the name of an Accessed Resource but may be overloaded by some data sources with additional data." flowLocation="0" eventLocation="21">
+    <subtype label="Access_Resource" length="128" offset="0" datatype="sstring"/>
+  </type>
+  <type id="65556" label="Catalog_Name" custom="F" indexed="T" datatype="7" description="Typically contains the Name of a catalog but may be overloaded by some data sources with additional data." flowLocation="0" eventLocation="21">
+    <subtype label="Catalog_Name" length="128" offset="0" datatype="sstring"/>
+  </type>
+  <type id="65557" label="DB2_Plan_Name" custom="F" indexed="T" datatype="7" description="Typically contains a Name of a DB2 plan but may be overloaded by some data sources with additional data." flowLocation="0" eventLocation="21">
+    <subtype label="DB2_Plan_Name" length="128" offset="0" datatype="sstring"/>
+  </type>
+  <type id="65558" label="File_Type" custom="F" indexed="T" datatype="7" description="Typically contains the type of a file but may be overloaded by some data sources with additional data." flowLocation="0" eventLocation="24">
+    <subtype label="File_Type" length="128" offset="0" datatype="sstring"/>
+  </type>
+  <type id="65559" label="FTP_Command" custom="F" indexed="T" datatype="7" description="Typically contains an FTP command used but may be overloaded by some data sources with additional data." flowLocation="0" eventLocation="25">
+    <subtype label="FTP_Command" length="128" offset="0" datatype="sstring"/>
+  </type>
+  <type id="65560" label="Job_Type" custom="F" indexed="T" datatype="7" description="Typically contains a Type of job but may be overloaded by some data sources with additional data." flowLocation="0" eventLocation="27">
+    <subtype label="Job_Type" length="128" offset="0" datatype="sstring"/>
+  </type>
+  <type id="65561" label="Logical_Unit_Name" custom="F" indexed="T" datatype="7" description="Typically contains a Name of a logical unit but may be overloaded by some data sources with additional data." flowLocation="0" eventLocation="24">
+    <subtype label="Logical_Unit_Name" length="128" offset="0" datatype="sstring"/>
+  </type>
+  <type id="65562" label="LPAR_DB2_Subsystem" custom="F" indexed="T" datatype="7" description="Typically contains a Name of an LPAR/DB2 Subsystem but may be overloaded by some data sources with additional data." flowLocation="0" eventLocation="25">
+    <subtype label="LPAR_DB2_Subsystem" length="128" offset="0" datatype="sstring"/>
+  </type>
+  <type id="65563" label="Step_Count" custom="F" indexed="T" datatype="7" description="Typically contains a Number of steps taken so far but may be overloaded by some data sources with additional data." flowLocation="0" eventLocation="24">
+    <subtype label="Step_Count" length="128" offset="0" datatype="sstring"/>
+  </type>
+  <type id="65564" label="Step_Name" custom="F" indexed="T" datatype="7" description="Typically contains a Step of a process or job but may be overloaded by some data sources with additional data." flowLocation="0" eventLocation="25">
+    <subtype label="Step_Name" length="128" offset="0" datatype="sstring"/>
+  </type>
+  <type id="65565" label="Volume_ID" custom="F" indexed="T" datatype="7" description="Typically contains an ID of a volume or drive but may be overloaded by some data sources with additional data." flowLocation="0" eventLocation="27">
+    <subtype label="Volume_ID" length="128" offset="0" datatype="sstring"/>
+  </type>
+  <type id="65566" label="Source_UserID" custom="F" indexed="T" datatype="7" description="Typically contains a User ID of a source device but may be overloaded by some data sources with additional data." flowLocation="0" eventLocation="26">
+    <subtype label="Source_UserID" length="128" offset="0" datatype="sstring"/>
+  </type>
+  <type id="65567" label="Destination_UserID" custom="F" indexed="T" datatype="7" description="Typically contains a User ID for a destination device but may be overloaded by some data sources with additional data." flowLocation="0" eventLocation="27">
+    <subtype label="Destination_UserID" length="128" offset="0" datatype="sstring"/>
+  </type>
+  <type id="65568" label="Mainframe_Job_Name" custom="F" indexed="T" datatype="7" description="Typically contains a Name of a mainframe job but may be overloaded by some data sources with additional data." flowLocation="0" eventLocation="5">
+    <subtype label="Mainframe_Job_Name" length="64" offset="0" datatype="sstring"/>
+  </type>
+  <type id="65569" label="Database_ID" custom="F" indexed="T" datatype="7" description="Typically contains an ID of a database but may be overloaded by some data sources with additional data." flowLocation="0" eventLocation="26">
+    <subtype label="Database_ID" length="128" offset="0" datatype="sstring"/>
+  </type>
+  <type id="65570" label="Malware_Insp_Action" custom="F" indexed="T" datatype="7" description="Typically contains an Action taken by anti-malware software but may be overloaded by some data sources with additional data." flowLocation="0" eventLocation="21">
+    <subtype label="Malware_Insp_Action" length="128" offset="0" datatype="sstring"/>
+  </type>
+  <type id="65571" label="Malware_Insp_Result" custom="F" indexed="T" datatype="7" description="Typically contains the Result of a malware inspection but may be overloaded by some data sources with additional data." flowLocation="0" eventLocation="22">
+    <subtype label="Malware_Insp_Result" length="128" offset="0" datatype="sstring"/>
+  </type>
+  <type id="65572" label="Source_Network" custom="F" indexed="T" datatype="7" description="Typically contains the Name of a source network but may be overloaded by some data sources with additional data." flowLocation="0" eventLocation="25">
+    <subtype label="Source_Network" length="128" offset="0" datatype="sstring"/>
+  </type>
+  <type id="65573" label="Destination_Network" custom="F" indexed="T" datatype="7" description="Typically contains the Name of a destination network but may be overloaded by some data sources with additional data." flowLocation="0" eventLocation="26">
+    <subtype label="Destination_Network" length="128" offset="0" datatype="sstring"/>
+  </type>
+  <type id="65574" label="Incoming_ID" custom="F" indexed="T" datatype="7" description="Typically contains an ID of an incoming device but may be overloaded by some data sources with additional data." flowLocation="0" eventLocation="21">
+    <subtype label="Incoming_ID" length="128" offset="0" datatype="sstring"/>
+  </type>
+  <type id="65575" label="External_Hostname" custom="F" indexed="T" datatype="7" description="Typically contains the Hostname of an external device but may be overloaded by some data sources with additional data." flowLocation="0" eventLocation="22">
+    <subtype label="External_Hostname" length="128" offset="0" datatype="sstring"/>
+  </type>
+  <type id="65576" label="Area" custom="F" indexed="T" datatype="7" description="Typically contains the Name of an area but may be overloaded by some data sources with additional data." flowLocation="0" eventLocation="27">
+    <subtype label="Area" length="128" offset="0" datatype="sstring"/>
+  </type>
+  <type id="65577" label="Facility" custom="F" indexed="T" datatype="7" description="Typically contains the Facility level for a device but may be overloaded by some data sources with additional data." flowLocation="0" eventLocation="26">
+    <subtype label="Facility" length="128" offset="0" datatype="sstring"/>
+  </type>
+  <type id="65578" label="Privileged_User" custom="F" indexed="T" datatype="7" description="Typically contains a Username of a privileged user but may be overloaded by some data sources with additional data." flowLocation="0" eventLocation="25">
+    <subtype label="Privileged_User" length="128" offset="0" datatype="sstring"/>
+  </type>
+  <type id="65579" label="Operating_System" custom="F" indexed="T" datatype="7" description="Typically contains the Operating system of a client or host device but may be overloaded by some data sources with additional data." flowLocation="0" eventLocation="22">
+    <subtype label="Operating_System" length="128" offset="0" datatype="sstring"/>
+  </type>
+  <type id="65580" label="Logon_Type" custom="F" indexed="T" datatype="7" description="Typically contains a Type of logon used or attempted but may be overloaded by some data sources with additional data." flowLocation="0" eventLocation="24">
+    <subtype label="Logon_Type" length="128" offset="0" datatype="sstring"/>
+  </type>
+  <type id="65581" label="Management_Server" custom="F" indexed="T" datatype="7" description="Typically contains the Name or ID of a management server but may be overloaded by some data sources with additional data." flowLocation="0" eventLocation="27">
+    <subtype label="Management_Server" length="128" offset="0" datatype="sstring"/>
+  </type>
+  <type id="65582" label="External_SessionID" custom="F" indexed="T" datatype="7" description="Typically contains an external session ID but may be overloaded by some data sources with additional data." flowLocation="0" eventLocation="27">
+    <subtype label="External_SessionID" length="128" offset="0" datatype="sstring"/>
+  </type>
+  <type id="65583" label="Source_Logon_ID" custom="F" indexed="T" datatype="7" description="Typically contains the Source logon ID of a user but may be overloaded by some data sources with additional data." flowLocation="0" eventLocation="25">
+    <subtype label="Source_Logon_ID" length="128" offset="0" datatype="sstring"/>
+  </type>
+  <type id="65584" label="Destination_Logon_ID" custom="F" indexed="T" datatype="7" description="Typically contains the Destination logon ID of a user but may be overloaded by some data sources with additional data." flowLocation="0" eventLocation="26">
+    <subtype label="Destination_Logon_ID" length="128" offset="0" datatype="sstring"/>
+  </type>
+  <type id="65585" label="Session_Status" custom="F" indexed="T" datatype="7" description="Typically contains the Status of a session or connection but may be overloaded by some data sources with additional data." flowLocation="0" eventLocation="21">
+    <subtype label="Session_Status" length="128" offset="0" datatype="sstring"/>
+  </type>
+  <type id="65586" label="URL_Category" custom="F" indexed="T" datatype="7" description="Typically contains the Classification of a URL but may be overloaded by some data sources with additional data." flowLocation="0" eventLocation="22">
+    <subtype label="URL_Category" length="128" offset="0" datatype="sstring"/>
+  </type>
+  <type id="65587" label="Caller_Process" custom="F" indexed="T" datatype="7" description="Typically contains the Name of a caller process but may be overloaded by some data sources with additional data." flowLocation="0" eventLocation="25">
+    <subtype label="Caller_Process" length="128" offset="0" datatype="sstring"/>
+  </type>
+  <type id="65588" label="Registry_Key" custom="F" indexed="T" datatype="7" description="Typically contains the Name of a registry key but may be overloaded by some data sources with additional data." flowLocation="0" eventLocation="26">
+    <subtype label="Registry_Key" length="128" offset="0" datatype="sstring"/>
+  </type>
+  <type id="65589" label="Registry_Value" custom="F" indexed="T" datatype="7" description="Typically contains a Registry value but may be overloaded by some data sources with additional data." flowLocation="0" eventLocation="27">
+    <subtype label="Registry_Value" length="128" offset="0" datatype="sstring"/>
+  </type>
+  <type id="65590" label="Mailbox" custom="F" indexed="T" datatype="7" description="Typically contains the name of a Mailbox or folder that stores e-mails but may be overloaded by some data sources with additional data." flowLocation="0" eventLocation="24">
+    <subtype label="Mailbox" length="128" offset="0" datatype="sstring"/>
+  </type>
+  <type id="65591" label="Directory" custom="F" indexed="T" datatype="7" description="Typically contains a directory or file path but may be overloaded by some data sources with additional data." flowLocation="0" eventLocation="24">
+    <subtype label="Directory" length="128" offset="0" datatype="sstring"/>
+  </type>
+  <type id="65592" label="Destination_Directory" custom="F" indexed="T" datatype="7" description="Typically contains a Directory on a destination device but may be overloaded by some data sources with additional data." flowLocation="0" eventLocation="27">
+    <subtype label="Destination_Directory" length="128" offset="0" datatype="sstring"/>
+  </type>
+  <type id="65593" label="SQL_Command" custom="F" indexed="T" datatype="7" description="Typically contains an SQL statement used but may be overloaded by some data sources with additional data." flowLocation="0" eventLocation="24">
+    <subtype label="SQL_Command" length="128" offset="0" datatype="sstring"/>
+  </type>
+  <type id="65594" label="Device_Action" custom="F" indexed="T" datatype="7" description="Typically contains an Action a device has taken but may be overloaded by some data sources with additional data." flowLocation="0" eventLocation="21">
+    <subtype label="Device_Action" length="128" offset="0" datatype="sstring"/>
+  </type>
+  <type id="65595" label="Threat_Category" custom="F" indexed="T" datatype="7" description="Typically contains the Type or category of a threat but may be overloaded by some data sources with additional data." flowLocation="0" eventLocation="25">
+    <subtype label="Threat_Category" length="128" offset="0" datatype="sstring"/>
+  </type>
+  <type id="65596" label="Threat_Handled" custom="F" indexed="T" datatype="7" description="Typically contains the Name of a handled threat event but may be overloaded by some data sources with additional data." flowLocation="0" eventLocation="27">
+    <subtype label="Threat_Handled" length="128" offset="0" datatype="sstring"/>
+  </type>
+  <type id="65597" label="Reason" custom="F" indexed="T" datatype="7" description="Typically contains the Reason for an event (e.g. shutdown reason, restart reason etc..) but may be overloaded by some data sources with additional data." flowLocation="21" eventLocation="27">
+    <subtype label="Reason" length="128" offset="0" datatype="sstring"/>
+  </type>
+  <type id="65598" label="Forwarding_Status" custom="F" indexed="T" datatype="7" description="Typically contains the Status of a forwarded port but may be overloaded by some data sources with additional data." flowLocation="7" eventLocation="0">
+    <subtype label="Forwarding_Status" length="64" offset="0" datatype="sstring"/>
+  </type>
+  <type id="65599" label="Detection_Method" custom="F" indexed="T" datatype="7" description="Typically contains the Method used to detect virus or malware but may be overloaded by some data sources with additional data." flowLocation="0" eventLocation="22">
+    <subtype label="Detection_Method" length="128" offset="0" datatype="sstring"/>
+  </type>
+  <type id="65600" label="Virtual_Machine_Name" custom="F" indexed="T" datatype="7" description="Typically contains the Name of a virtual machine but may be overloaded by some data sources with additional data." flowLocation="0" eventLocation="23">
+    <subtype label="Virtual_Machine_Name" length="128" offset="0" datatype="sstring"/>
+  </type>
+  <type id="65601" label="Virtual_Machine_ID" custom="F" indexed="T" datatype="7" description="Typically contains the ID of a virtual machine but may be overloaded by some data sources with additional data." flowLocation="0" eventLocation="24">
+    <subtype label="Virtual_Machine_ID" length="128" offset="0" datatype="sstring"/>
+  </type>
+  <type id="65602" label="Datacenter_ID" custom="F" indexed="T" datatype="7" description="Typically contains the ID of a data center but may be overloaded by some data sources with additional data." flowLocation="0" eventLocation="25">
+    <subtype label="Datacenter_ID" length="128" offset="0" datatype="sstring"/>
+  </type>
+  <type id="65603" label="Datacenter_Name" custom="F" indexed="T" datatype="7" description="Typically contains the Name of a data center but may be overloaded by some data sources with additional data." flowLocation="0" eventLocation="26">
+    <subtype label="Datacenter_Name" length="128" offset="0" datatype="sstring"/>
+  </type>
+  <type id="65604" label="Interface_Dest" custom="F" indexed="T" datatype="7" description="Typically contains the name of an Interface on a destination device but may be overloaded by some data sources with additional data." flowLocation="0" eventLocation="27">
+    <subtype label="Interface_Dest" length="128" offset="0" datatype="sstring"/>
+  </type>
+  <type id="65605" label="Organizational_Unit" custom="F" indexed="T" datatype="7" description="Typically contains the O.U. that a user or computer belongs to but may be overloaded by some data sources with additional data." flowLocation="0" eventLocation="24">
+    <subtype label="Organizational_Unit" length="128" offset="0" datatype="sstring"/>
+  </type>
+  <type id="65606" label="External_Device_Type" custom="F" indexed="T" datatype="7" description="Typically contains the Type of an external device but may be overloaded by some data sources with additional data." flowLocation="0" eventLocation="23">
+    <subtype label="External_Device_Type" length="128" offset="0" datatype="sstring"/>
+  </type>
+  <type id="65607" label="External_Device_ID" custom="F" indexed="T" datatype="7" description="Typically contains the ID of an external device but may be overloaded by some data sources with additional data." flowLocation="0" eventLocation="26">
+    <subtype label="External_Device_ID" length="128" offset="0" datatype="sstring"/>
+  </type>
+  <type id="65608" label="External_Device_Name" custom="F" indexed="T" datatype="7" description="Typically contains the Name of an external device but may be overloaded by some data sources with additional data." flowLocation="0" eventLocation="21">
+    <subtype label="External_Device_Name" length="128" offset="0" datatype="sstring"/>
+  </type>
+  <type id="65609" label="Service_Name" custom="F" indexed="T" datatype="7" description="Typically contains the Name of a Service but may be overloaded by some data sources with additional data." flowLocation="0" eventLocation="24">
+    <subtype label="Service_Name" length="128" offset="0" datatype="sstring"/>
+  </type>
+  <type id="65610" label="Reputation_Name" custom="F" indexed="T" datatype="7" description="Typically contains the Name of an agency rating reputation, or reputation of sender of an email but may be overloaded by some data sources with additional data." flowLocation="0" eventLocation="21">
+    <subtype label="Reputation_Name" length="128" offset="0" datatype="sstring"/>
+  </type>
+  <type id="65611" label="Status" custom="F" indexed="T" datatype="7" description="Typically contains a status but may be overloaded by some data sources with additional data." flowLocation="0" eventLocation="23">
+    <subtype label="Status" length="128" offset="0" datatype="sstring"/>
+  </type>
+  <type id="65612" label="Sub_Status" custom="F" indexed="T" datatype="7" description="Typically contains a sub-status but may be overloaded by some data sources with additional data." flowLocation="0" eventLocation="26">
+    <subtype label="Sub_Status" length="128" offset="0" datatype="sstring"/>
+  </type>
+  <type id="65613" label="Web_Domain" custom="F" indexed="T" datatype="7" description="Typically contains a web domain name but may be overloaded by some data sources with additional data." flowLocation="0" eventLocation="26">
+    <subtype label="Web_Domain" length="128" offset="0" datatype="sstring"/>
+  </type>
+  <type id="65614" label="Group_Name" custom="F" indexed="T" datatype="7" description="Typically contains a group name but may be overloaded by some data sources with additional data." flowLocation="0" eventLocation="21">
+    <subtype label="Group_Name" length="128" offset="0" datatype="sstring"/>
+  </type>
+  <type id="65615" label="App_Layer_Protocol" custom="F" indexed="T" datatype="7" description="Typically contains an Application layer protocol but may be overloaded by some data sources with additional data." flowLocation="0" eventLocation="22">
+    <subtype label="App_Layer_Protocol" length="128" offset="0" datatype="sstring"/>
+  </type>
+  <type id="65616" label="Rule_Name" custom="F" indexed="T" datatype="7" description="Typically contains a rule name but may be overloaded by some data sources with additional data." flowLocation="0" eventLocation="21">
+    <subtype label="Rule_Name" length="128" offset="0" datatype="sstring"/>
+  </type>
+  <type id="65617" label="Security_ID" custom="F" indexed="T" datatype="7" description="Typically contains the Security ID of a Windows event but may be overloaded by some data sources with additional data." flowLocation="0" eventLocation="22">
+    <subtype label="Security_ID" length="128" offset="0" datatype="sstring"/>
+  </type>
+  <type id="65618" label="Authentication_Type" custom="F" indexed="T" datatype="7" description="Typically contains the Type of authentication used but may be overloaded by some data sources with additional data." flowLocation="0" eventLocation="25">
+    <subtype label="Authentication_Type" length="128" offset="0" datatype="sstring"/>
+  </type>
+  <type id="65619" label="SHA1" custom="F" indexed="T" datatype="7" description="Typically contains a SHA1 hash but may be overloaded by some data sources with additional data." flowLocation="0" eventLocation="26">
+    <subtype label="SHA1" length="128" offset="0" datatype="sstring"/>
+  </type>
+  <type id="65620" label="File_ID" custom="F" indexed="T" datatype="7" description="Typically contains a file identification but may be overloaded by some data sources with additional data." flowLocation="0" eventLocation="7">
+    <subtype label="File_ID" length="64" offset="0" datatype="sstring"/>
+  </type>
+  <type id="65621" label="Attribute_Type" custom="F" indexed="T" datatype="7" description="Typically contains the Type of an attribute but may be overloaded by some data sources with additional data." flowLocation="0" eventLocation="22">
+    <subtype label="Attribute_Type" length="128" offset="0" datatype="sstring"/>
+  </type>
+  <type id="65622" label="Access_Mask" custom="F" indexed="T" datatype="7" description="Typically contains the access mask of a secure object but may be overloaded by some data sources with additional data." flowLocation="0" eventLocation="23">
+    <subtype label="Access_Mask" length="128" offset="0" datatype="sstring"/>
+  </type>
+  <type id="65623" label="VPN_Feature_Name" custom="F" indexed="T" datatype="7" description="Typically contains the Name of a Virtual Private Network feature but may be overloaded by some data sources with additional data." flowLocation="0" eventLocation="25">
+    <subtype label="VPN_Feature_Name" length="128" offset="0" datatype="sstring"/>
+  </type>
+  <type id="65624" label="Hash" custom="F" indexed="T" datatype="7" description="Typically contains a Hash of a file or program but may be overloaded by some data sources with additional data." flowLocation="0" eventLocation="27">
+    <subtype label="Hash" length="128" offset="0" datatype="sstring"/>
+  </type>
+  <type id="65625" label="Hash_Type" custom="F" indexed="T" datatype="7" description="Typically contains the Type of hash stored in the Hash field but may be overloaded by some data sources with additional data." flowLocation="0" eventLocation="6">
+    <subtype label="Hash_Type" length="64" offset="0" datatype="sstring"/>
+  </type>
+  <type id="65626" label="Wireless_SSID" custom="F" indexed="T" datatype="7" description="Typically contains the SSID for Wireless Access Points, but may be overloaded with data from other data sources." flowLocation="0" eventLocation="23">
+    <subtype label="Wireless_SSID" length="128" offset="0" datatype="sstring"/>
+  </type>
+  <type id="65627" label="Subcategory" custom="F" indexed="T" datatype="7" description="Typically contains an event's subcategorization, but may be overloaded with additional data by some data sources." flowLocation="0" eventLocation="24">
+    <subtype label="Subcategory" length="128" offset="0" datatype="sstring"/>
+  </type>
+  <type id="65628" label="CnC_Host" custom="F" indexed="T" datatype="7" description="Typically contains a CnC Host name but may be overloaded by some data sources with additional data." flowLocation="0" eventLocation="21">
+    <subtype label="CnC_Host" length="128" offset="0" datatype="sstring"/>
+  </type>
+  <type id="65629" label="Share_Name" custom="F" indexed="T" datatype="7" description="Typically contains the Name of a share but may be overloaded by some data sources with additional data." flowLocation="0" eventLocation="22">
+    <subtype label="Share_Name" length="128" offset="0" datatype="sstring"/>
+  </type>
+  <type id="65630" label="SHA256" custom="F" indexed="T" datatype="7" description="Typically contains a SHA256 hash but may be overloaded by some data sources with additional data." flowLocation="0" eventLocation="25">
+    <subtype label="SHA256" length="128" offset="0" datatype="sstring"/>
+  </type>
+  <type id="196609" label="Queue_ID" custom="F" indexed="T" datatype="13" description="Typically contains the Queue Id of an email but may be overloaded by some data sources with additional data." flowLocation="0" eventLocation="27">
+    <subtype label="Queue_ID" length="128" offset="0" datatype="strlit"/>
+  </type>
+  <type id="262145" label="Response_Time" custom="F" indexed="T" datatype="1" description="Typically contains the response time of an SQL query in second but may be overloaded by some data sources with additional data." flowLocation="0" eventLocation="10">
+    <subtype label="Seconds" length="32" offset="0" datatype="uint32"/>
+    <subtype label="Milliseconds" length="32" offset="32" datatype="uint32"/>
+  </type>
+  <type id="262146" label="NAT_Details" custom="F" indexed="T" datatype="1" description="Typically contains a Type of Network Address Translation being used but may be overloaded by some data sources with additional data." flowLocation="1" eventLocation="9">
+    <subtype label="NAT_Address" length="32" offset="0" datatype="ipv4"/>
+    <subtype label="NAT_Port" length="16" offset="32" datatype="uint16"/>
+    <subtype label="NAT_Type" length="16" offset="48" datatype="uint16"/>
+  </type>
+  <type id="262147" label="Network_Layer" custom="F" indexed="T" datatype="6" description="Typically contains the network layer protocol of a flow but may be overloaded by some data sources with additional data." flowLocation="1" eventLocation="0">
+    <subtype label="Network_Layer" length="64" offset="0" datatype="sigid"/>
+  </type>
+  <type id="262148" label="Transport_Layer" custom="F" indexed="T" datatype="6" description="Typically contains the transport layer information of a flow but may be overloaded by some data sources with additional data." flowLocation="2" eventLocation="0">
+    <subtype label="Transport_Layer" length="64" offset="0" datatype="sigid"/>
+  </type>
+  <type id="262149" label="Session_Layer" custom="F" indexed="T" datatype="6" description="Typically contains the session layer protocol information of a flow but may be overloaded by some data sources with additional data." flowLocation="3" eventLocation="0">
+    <subtype label="Session_Layer" length="64" offset="0" datatype="sigid"/>
+  </type>
+  <type id="262150" label="Application_Layer" custom="F" indexed="T" datatype="6" description="Typically contains the application layer protocol of a flow but may be overloaded by some data sources with additional data." flowLocation="4" eventLocation="0">
+    <subtype label="Application_Layer" length="64" offset="0" datatype="sigid"/>
+  </type>
+  <type id="262151" label="HTTP_Layer" custom="F" indexed="T" datatype="6" description="Typically contains the HTTP layer information of a flow but may be overloaded by some data sources with additional data." flowLocation="5" eventLocation="0">
+    <subtype label="HTTP_Layer" length="64" offset="0" datatype="sigid"/>
+  </type>
+  <type id="262152" label="PID" custom="F" indexed="T" datatype="11" description="Typically contains a Process ID but may be overloaded by some data sources with additional data." flowLocation="0" eventLocation="24">
+    <subtype label="PID" length="64" offset="0" datatype="uint64"/>
+  </type>
+  <type id="262153" label="Grid_Master_IP" custom="F" indexed="T" datatype="8" description="Typically contains the IP of a grid master but may be overloaded by some data sources with additional data." flowLocation="0" eventLocation="22">
+    <subtype label="Grid_Master_IP" length="128" offset="0" datatype="iptype"/>
+  </type>
+  <type id="262154" label="Device_IP" custom="F" indexed="T" datatype="8" description="Typically contains the IP of a specified device but may be overloaded by some data sources with additional data." flowLocation="0" eventLocation="25">
+    <subtype label="Device_IP" length="128" offset="0" datatype="iptype"/>
+  </type>
+  <type id="262155" label="Device_Port" custom="F" indexed="T" datatype="3" description="Typically contains the Port for a specified device but may be overloaded by some data sources with additional data." flowLocation="0" eventLocation="27">
+    <subtype label="Device_Port" length="64" offset="0" datatype="uint64"/>
+  </type>
+  <type id="262156" label="External_EventID" custom="F" indexed="T" datatype="11" description="Typically contains an Event id as reported by an external entity but may be overloaded by some data sources with additional data." flowLocation="0" eventLocation="22">
+    <subtype label="External_EventID" length="64" offset="0" datatype="uint64"/>
+  </type>
+  <type id="262157" label="Spam_Score" custom="F" indexed="T" datatype="5" description="Typically contains the reported Spam Score of an e-mail sender but may be overloaded by some data sources with additional data." flowLocation="0" eventLocation="8">
+    <subtype label="Spam_Score" length="64" offset="0" datatype="float"/>
+  </type>
+  <type id="262158" label="External_SubEventID" custom="F" indexed="T" datatype="11" description="Typically contains a Sub-event ID as reported by an external entity but may be overloaded by some data sources with additional data." flowLocation="0" eventLocation="23">
+    <subtype label="External_SubEventID" length="64" offset="0" datatype="uint64"/>
+  </type>
+  <type id="262159" label="File_Hash" custom="F" indexed="T" datatype="9" description="Typically contains an MD5 hash value of a file but may be overloaded by some data sources with additional data." flowLocation="0" eventLocation="27">
+    <subtype label="File_Hash" length="128" offset="0" datatype="guid"/>
+  </type>
+  <type id="262160" label="Handle_ID" custom="F" indexed="T" datatype="11" description="Typically contains the Handle ID of a user but may be overloaded by some data sources with additional data." flowLocation="0" eventLocation="21">
+    <subtype label="Handle_ID" length="64" offset="0" datatype="uint64"/>
+  </type>
+  <type id="262161" label="Instance_GUID" custom="F" indexed="T" datatype="9" description="Typically contains a Global unique identifier for an instance of a Database but may be overloaded by some data sources with additional data." flowLocation="0" eventLocation="26">
+    <subtype label="Instance_GUID" length="128" offset="0" datatype="guid"/>
+  </type>
+  <type id="262162" label="Agent_GUID" custom="F" indexed="T" datatype="9" description="Typically contains a Globally unique identifier for a computer. but may be overloaded by some data sources with additional data." flowLocation="0" eventLocation="27">
+    <subtype label="Agent_GUID" length="128" offset="0" datatype="guid"/>
+  </type>
+  <type id="262163" label="UUID" custom="F" indexed="T" datatype="9" description="Typically contains a universally unique identifier but may be overloaded by some data sources with additional data." flowLocation="0" eventLocation="22">
+    <subtype label="UUID" length="128" offset="0" datatype="guid"/>
+  </type>
+  <type id="262164" label="Reputation" custom="F" indexed="T" datatype="11" description="Typically contains a Reputation score for the sender of an e-mail but may be overloaded by some data sources with additional data." flowLocation="0" eventLocation="23">
+    <subtype label="Reputation" length="64" offset="0" datatype="uint64"/>
+  </type>
+  <type id="262165" label="DAT_Version" custom="F" indexed="T" datatype="11" description="Typically contains the Version number of a data file but may be overloaded by some data sources with additional data." flowLocation="0" eventLocation="25">
+    <subtype label="DAT_Version" length="64" offset="0" datatype="float"/>
+  </type>
+  <type id="262166" label="Server_ID" custom="F" indexed="T" datatype="11" description="Typically contains a server ID but may be overloaded by some data sources with additional data." flowLocation="0" eventLocation="21">
+    <subtype label="Server_ID" length="64" offset="0" datatype="uint64"/>
+  </type>
+  <type id="262167" label="Policy_ID" custom="F" indexed="T" datatype="11" description="Typically contains a group or domain policy ID but may be overloaded by some data sources with additional data." flowLocation="0" eventLocation="22">
+    <subtype label="Policy_ID" length="64" offset="0" datatype="uint64"/>
+  </type>
+  <type id="262168" label="Handheld_ID" custom="F" indexed="T" datatype="11" description="Typically contains the ID of a handheld device but may be overloaded by some data sources with additional data." flowLocation="0" eventLocation="23">
+    <subtype label="Handheld_ID" length="64" offset="0" datatype="uint64"/>
+  </type>
+  <type id="262169" label="Database_GUID" custom="F" indexed="T" datatype="9" description="Typically contains a Globally unique identifier for a Database but may be overloaded by some data sources with additional data." flowLocation="0" eventLocation="26">
+    <subtype label="Database_GUID" length="128" offset="0" datatype="guid"/>
+  </type>
+  <type id="262170" label="Analyzer_DAT_Version" custom="F" indexed="T" datatype="11" description="Typically contains an Antivirus .DAT file Version but may be overloaded by some data sources with additional data." flowLocation="0" eventLocation="24">
+    <subtype label="Analyzer_DAT_Version" length="64" offset="0" datatype="float"/>
+  </type>
+  <type id="262171" label="Reputation_Score" custom="F" indexed="T" datatype="11" description="Typically contains a reputation score for a sender of an e-mail but may be overloaded by some data sources with additional data." flowLocation="0" eventLocation="23">
+    <subtype label="Reputation_Score" length="64" offset="0" datatype="float"/>
+  </type>
+  <type id="262172" label="Parent_File_Hash" custom="F" indexed="T" datatype="9" description="Typically contains an MD5 hash of a file but may be overloaded by some data sources with additional data." flowLocation="0" eventLocation="22">
+    <subtype label="Parent_File_Hash" length="128" offset="0" datatype="guid"/>
+  </type>
+  <type id="262173" label="Incident_ID" custom="F" indexed="T" datatype="2" description="Typically contains an identifier for an incident but may be overloaded by some data sources with additional data." flowLocation="0" eventLocation="2">
+    <subtype label="Incident_ID" length="64" offset="0" datatype="int64"/>
+  </type>
+  <type id="262174" label="Victim_IP" custom="F" indexed="T" datatype="4" description="Typically contains the IP of a device or system that was victim of an attack or exploit but may be overloaded by some data sources with additional data." flowLocation="0" eventLocation="6">
+    <subtype label="Victim_IP" length="32" offset="0" datatype="ipv4"/>
+  </type>
+  <type id="262175" label="Attacker_IP" custom="F" indexed="T" datatype="4" description="Typically contains the IP of a device or system that made an attack but may be overloaded by some data sources with additional data." flowLocation="0" eventLocation="7">
+    <subtype label="Attacker_IP" length="32" offset="0" datatype="ipv4"/>
+  </type>
+  <type id="262176" label="Object_GUID" custom="F" indexed="T" datatype="9" description="Typically contains a Globally Unique Identifier for an object but may be overloaded by some data sources with additional data." flowLocation="0" eventLocation="24">
+    <subtype label="Object_GUID" length="128" offset="0" datatype="guid"/>
+  </type>
+  <type id="262177" label="Reputation_Server_IP" custom="F" indexed="T" datatype="8" description="Typically contains the IP of a reputation server but may be overloaded by some data sources with additional data." flowLocation="0" eventLocation="24">
+    <subtype label="Reputation_Server_IP" length="128" offset="0" datatype="iptype"/>
+  </type>
+  <type id="262178" label="DNS_Server_IP" custom="F" indexed="T" datatype="8" description="Typically contains the IP address of the DNS server but may be overloaded by some data sources." flowLocation="0" eventLocation="22">
+    <subtype label="DNS_Server_IP" length="128" offset="0" datatype="iptype"/>
+  </type>
+  <type id="262179" label="Device_Confidence" custom="F" indexed="T" datatype="11" description="Reputation confidence of device." flowLocation="0" eventLocation="24">
+    <subtype label="Device_Confidence" length="64" offset="0" datatype="uint64"/>
+  </type>
+  <type id="4259841" label="URL" custom="F" indexed="F" datatype="7" description="Typically contains an HTTP URL but may be overloaded by some data sources with additional data." flowLocation="0" eventLocation="8">
+    <subtype label="URL" length="64" offset="0" datatype="sstring"/>
+  </type>
+  <type id="4259842" label="Message_Text" custom="F" indexed="F" datatype="7" description="Typically contains a Database server message but may be overloaded by some data sources with additional data." flowLocation="0" eventLocation="9">
+    <subtype label="Message_Text" length="64" offset="0" datatype="sstring"/>
+  </type>
+  <type id="4259843" label="Filename" custom="F" indexed="F" datatype="7" description="Typically contains the Filename associated with transferred object but may be overloaded by some data sources with additional data." flowLocation="0" eventLocation="3">
+    <subtype label="Filename" length="64" offset="0" datatype="sstring"/>
+  </type>
+  <type id="4259844" label="From" custom="F" indexed="F" datatype="7" description="Typically contains an email's From address but may be overloaded by some data sources with additional data." flowLocation="0" eventLocation="5">
+    <subtype label="From" length="64" offset="0" datatype="sstring"/>
+  </type>
+  <type id="4259845" label="To" custom="F" indexed="F" datatype="7" description="Typically contains an email's To address but may be overloaded by some data sources with additional data." flowLocation="0" eventLocation="6">
+    <subtype label="To" length="64" offset="0" datatype="sstring"/>
+  </type>
+  <type id="4259846" label="Cc" custom="F" indexed="F" datatype="7" description="Typically contains an email's CC address(es) but may be overloaded by some data sources with additional data." flowLocation="0" eventLocation="8">
+    <subtype label="Cc" length="64" offset="0" datatype="sstring"/>
+  </type>
+  <type id="4259847" label="Bcc" custom="F" indexed="F" datatype="7" description="Typically contains an email's BCC address but may be overloaded by some data sources with additional data." flowLocation="0" eventLocation="9">
+    <subtype label="Bcc" length="64" offset="0" datatype="sstring"/>
+  </type>
+  <type id="4259848" label="Subject" custom="F" indexed="F" datatype="7" description="Typically contains an email's subject but may be overloaded by some data sources with additional data." flowLocation="0" eventLocation="10">
+    <subtype label="Subject" length="64" offset="0" datatype="sstring"/>
+  </type>
+  <type id="4259849" label="User_Agent" custom="F" indexed="F" datatype="7" description="Typically contains an http user agent but may be overloaded by some data sources with additional data." flowLocation="0" eventLocation="6">
+    <subtype label="User_Agent" length="64" offset="0" datatype="sstring"/>
+  </type>
+  <type id="4259850" label="Cookie" custom="F" indexed="F" datatype="7" description="Typically contains an HTTP cookie but may be overloaded by some data sources with additional data." flowLocation="0" eventLocation="9">
+    <subtype label="Cookie" length="64" offset="0" datatype="sstring"/>
+  </type>
+  <type id="4259851" label="Referer" custom="F" indexed="F" datatype="7" description="Typically contains an HTTP referrer but may be overloaded by some data sources with additional data." flowLocation="0" eventLocation="10">
+    <subtype label="Referer" length="64" offset="0" datatype="sstring"/>
+  </type>
+  <type id="4259852" label="Destination_Filename" custom="F" indexed="F" datatype="7" description="Typically contains a destination filename of a file transfer but may be overloaded by some data sources with additional data." flowLocation="0" eventLocation="9">
+    <subtype label="Destination_Filename" length="64" offset="0" datatype="sstring"/>
+  </type>
+  <type id="4259853" label="Client_Version" custom="F" indexed="F" datatype="7" description="Typically contains an instant Messaging client version but may be overloaded by some data sources with additional data." flowLocation="0" eventLocation="9">
+    <subtype label="Client_Version" length="64" offset="0" datatype="sstring"/>
+  </type>
+  <type id="4259854" label="Job_Name" custom="F" indexed="F" datatype="7" description="Typically contains the name of print job but may be overloaded by some data sources with additional data." flowLocation="0" eventLocation="5">
+    <subtype label="Job_Name" length="64" offset="0" datatype="sstring"/>
+  </type>
+  <type id="4259855" label="Language" custom="F" indexed="F" datatype="7" description="Typically contains the language that a print job is using, (eg. PC) but may be overloaded by some data sources with additional data." flowLocation="0" eventLocation="10">
+    <subtype label="Language" length="64" offset="0" datatype="sstring"/>
+  </type>
+  <type id="4259856" label="SWF_URL" custom="F" indexed="F" datatype="7" description="Typically contains the Real-Time Media Protocol 'SWF' URL but may be overloaded by some data sources with additional data." flowLocation="0" eventLocation="5">
+    <subtype label="SWF_URL" length="64" offset="0" datatype="sstring"/>
+  </type>
+  <type id="4259857" label="TC_URL" custom="F" indexed="F" datatype="7" description="Typically contains the Real-Time Media Protocol 'TC' URL but may be overloaded by some data sources with additional data." flowLocation="0" eventLocation="6">
+    <subtype label="TC_URL" length="64" offset="0" datatype="sstring"/>
+  </type>
+  <type id="4259858" label="RTMP_Application" custom="F" indexed="F" datatype="7" description="Typically contains the name of an application using the Real Time Media Protocol but may be overloaded by some data sources with additional data." flowLocation="0" eventLocation="9">
+    <subtype label="RTMP_Application" length="64" offset="0" datatype="sstring"/>
+  </type>
+  <type id="4259859" label="Version" custom="F" indexed="F" datatype="7" description="Typically contains a Database version or Real Time Media Protocol version but may be overloaded by some data sources with additional data." flowLocation="0" eventLocation="10">
+    <subtype label="Version" length="64" offset="0" datatype="sstring"/>
+  </type>
+  <type id="4259860" label="Local_User_Name" custom="F" indexed="F" datatype="7" description="Typically contains a Local login username but may be overloaded by some data sources with additional data." flowLocation="0" eventLocation="5">
+    <subtype label="Local_User_Name" length="64" offset="0" datatype="sstring"/>
+  </type>
+  <type id="4259861" label="HTTP_Req_URL" custom="F" indexed="F" datatype="7" description="Typically contains the HTTP URL requested by a flow but may be overloaded by some data sources with additional data." flowLocation="2" eventLocation="0">
+    <subtype label="HTTP_Req_URL" length="64" offset="0" datatype="sstring"/>
+  </type>
+  <type id="4259862" label="HTTP_Req_Cookie" custom="F" indexed="F" datatype="7" description="Typically contains an HTTP Cookie requested by a flow but may be overloaded by some data sources with additional data." flowLocation="3" eventLocation="0">
+    <subtype label="HTTP_Req_Cookie" length="64" offset="0" datatype="sstring"/>
+  </type>
+  <type id="4259863" label="HTTP_Req_Referer" custom="F" indexed="F" datatype="7" description="Typically contains the Referring address for an HTTP request but may be overloaded by some data sources with additional data." flowLocation="4" eventLocation="0">
+    <subtype label="HTTP_Req_Referer" length="64" offset="0" datatype="sstring"/>
+  </type>
+  <type id="4259864" label="HTTP_Req_Host" custom="F" indexed="F" datatype="7" description="Typically contains the Hostname of an HTTP request but may be overloaded by some data sources with additional data." flowLocation="5" eventLocation="0">
+    <subtype label="HTTP_Req_Host" length="64" offset="0" datatype="sstring"/>
+  </type>
+  <type id="4259865" label="HTTP_Req_Method" custom="F" indexed="F" datatype="7" description="Typically contains the Method used in HTTP request but may be overloaded by some data sources with additional data." flowLocation="6" eventLocation="0">
+    <subtype label="HTTP_Req_Method" length="64" offset="0" datatype="sstring"/>
+  </type>
+  <type id="4259866" label="HTTP_User_Agent" custom="F" indexed="F" datatype="7" description="Typically contains the User agent used for an HTTP request but may be overloaded by some data sources with additional data." flowLocation="7" eventLocation="0">
+    <subtype label="HTTP_User_Agent" length="64" offset="0" datatype="sstring"/>
+  </type>
+  <type id="4259867" label="DNS_Name" custom="F" indexed="F" datatype="7" description="Typically contains the Name of a DNS record but may be overloaded by some data sources with additional data." flowLocation="0" eventLocation="5">
+    <subtype label="DNS_Name" length="64" offset="0" datatype="sstring"/>
+  </type>
+  <type id="4259868" label="SNMP_Item" custom="F" indexed="F" datatype="7" description="Typically contains an SNMP item but may be overloaded by some data sources with additional data." flowLocation="0" eventLocation="6">
+    <subtype label="SNMP_Item" length="64" offset="0" datatype="sstring"/>
+  </type>
+  <type id="4259869" label="Sensor_UUID" custom="F" indexed="F" datatype="7" description="Typically contains a Universally Unique Identifier but may be overloaded by some data sources with additional data." flowLocation="0" eventLocation="9">
+    <subtype label="Sensor_UUID" length="64" offset="0" datatype="sstring"/>
+  </type>
+  <type id="4259870" label="Process_Name" custom="F" indexed="F" datatype="7" description="Typically contains the Name of a process but may be overloaded by some data sources with additional data." flowLocation="0" eventLocation="23">
+    <subtype label="Process_Name" length="128" offset="0" datatype="sstring"/>
+  </type>
+  <type id="4259871" label="Source_Context" custom="F" indexed="F" datatype="7" description="Typically contains the Context-scope or context-id for source but may be overloaded by some data sources with additional data." flowLocation="0" eventLocation="25">
+    <subtype label="Source_Context" length="128" offset="0" datatype="sstring"/>
+  </type>
+  <type id="4259872" label="Target_Context" custom="F" indexed="F" datatype="7" description="Typically contains the Context-scope or context-id for destination but may be overloaded by some data sources with additional data." flowLocation="0" eventLocation="26">
+    <subtype label="Target_Context" length="128" offset="0" datatype="sstring"/>
+  </type>
+  <type id="4259873" label="Description" custom="F" indexed="F" datatype="7" description="Typically contains a description of an event or log but may be overloaded by some data sources with additional data." flowLocation="0" eventLocation="27">
+    <subtype label="Description" length="128" offset="0" datatype="sstring"/>
+  </type>
+  <type id="4259874" label="SQL_Statement" custom="F" indexed="F" datatype="7" description="Typically contains the Text of an SQL statement but may be overloaded by some data sources with additional data." flowLocation="0" eventLocation="27">
+    <subtype label="SQL_Statement" length="128" offset="0" datatype="sstring"/>
+  </type>
+  <type id="4259875" label="From_Address" custom="F" indexed="F" datatype="7" description="Typically contains a Sender's address in an e-mail but may be overloaded by some data sources with additional data." flowLocation="0" eventLocation="24">
+    <subtype label="From_Address" length="128" offset="0" datatype="sstring"/>
+  </type>
+  <type id="4259876" label="To_Address" custom="F" indexed="F" datatype="7" description="Typically contains an Address of a recipient for an e-mail but may be overloaded by some data sources with additional data." flowLocation="0" eventLocation="25">
+    <subtype label="To_Address" length="128" offset="0" datatype="sstring"/>
+  </type>
+  <type id="4259877" label="File_Path" custom="F" indexed="F" datatype="7" description="Typically contains a Path to a file but may be overloaded by some data sources with additional data." flowLocation="0" eventLocation="23">
+    <subtype label="File_Path" length="128" offset="0" datatype="sstring"/>
+  </type>
+  <type id="4259878" label="Target_Process_Name" custom="F" indexed="F" datatype="7" description="Typically contains a pertinent process name but may be overloaded by some data sources with additional data." flowLocation="0" eventLocation="8">
+    <subtype label="Target_Process_Name" length="64" offset="0" datatype="sstring"/>
+  </type>
+  <type id="4259879" label="Privileges" custom="F" indexed="F" datatype="7" description="Typically contains a user's privileges but may be overloaded by some data sources with additional data." flowLocation="0" eventLocation="27">
+    <subtype label="Privileges" length="128" offset="0" datatype="sstring"/>
+  </type>
+  <type id="4259880" label="Search_Query" custom="F" indexed="F" datatype="7" description="Typically contains a Query used to search but may be overloaded by some data sources with additional data." flowLocation="0" eventLocation="26">
+    <subtype label="Search_Query" length="128" offset="0" datatype="sstring"/>
+  </type>
+  <type id="4259881" label="PCAP_Name" custom="F" indexed="F" datatype="7" description="Typically contains the Name of a PCAP file but may be overloaded by some data sources with additional data." flowLocation="0" eventLocation="26">
+    <subtype label="PCAP_Name" length="128" offset="0" datatype="sstring"/>
+  </type>
+  <type id="4259882" label="Vulnerability_References" custom="F" indexed="F" datatype="7" description="Typically contains the Vulnerability targeted by an exploit but may be overloaded by some data sources with additional data." flowLocation="0" eventLocation="24">
+    <subtype label="Vulnerability_References" length="128" offset="0" datatype="sstring"/>
+  </type>
+  <type id="4259883" label="Access_Privileges" custom="F" indexed="F" datatype="7" description="Typically contains the Access Privileges information from a Windows event but may be overloaded by some data sources with additional data." flowLocation="0" eventLocation="27">
+    <subtype label="Access_Privileges" length="128" offset="0" datatype="sstring"/>
+  </type>
+  <type id="4259884" label="Old_Value" custom="F" indexed="F" datatype="7" description="Typically contains a value that will be changed but may be overloaded by some data sources with additional data." flowLocation="0" eventLocation="26">
+    <subtype label="Old_Value" length="128" offset="0" datatype="sstring"/>
+  </type>
+  <type id="4259885" label="New_Value" custom="F" indexed="F" datatype="7" description="Typically contains a value that has been changed but may be overloaded by some data sources with additional data." flowLocation="0" eventLocation="27">
+    <subtype label="New_Value" length="128" offset="0" datatype="sstring"/>
+  </type>
+  <type id="4259886" label="Device_URL" custom="F" indexed="F" datatype="7" description="Typically contains the URL of a device or host but may be overloaded by some data sources with additional data." flowLocation="0" eventLocation="9">
+    <subtype label="Device_URL" length="64" offset="0" datatype="sstring"/>
+  </type>
+  <type id="4259887" label="Engine_List" custom="F" indexed="F" datatype="7" description="Typically contains a list of engines but may be overloaded by some data sources with additional data." flowLocation="0" eventLocation="23">
+    <subtype label="Engine_List" length="128" offset="0" datatype="sstring"/>
+  </type>
+  <type id="4456449" label="Num_Copies" custom="F" indexed="F" datatype="3" description="Typically contains the number of copies requested in print job but may be overloaded by some data sources with additional data." flowLocation="0" eventLocation="6">
+    <subtype label="Num_Copies" length="64" offset="0" datatype="uint64"/>
+  </type>
+  <type id="4456450" label="Start_Page" custom="F" indexed="F" datatype="3" description="Typically contains a page number that a print job starts at but may be overloaded by some data sources with additional data." flowLocation="0" eventLocation="8">
+    <subtype label="Start_Page" length="64" offset="0" datatype="uint64"/>
+  </type>
+  <type id="4456451" label="End_Page" custom="F" indexed="F" datatype="3" description="Typically contains a print job's end page but may be overloaded by some data sources with additional data." flowLocation="0" eventLocation="9">
+    <subtype label="End_Page" length="64" offset="0" datatype="uint64"/>
+  </type>
+  <type id="4456452" label="Flow_Flags" custom="F" indexed="F" datatype="3" description="Typically contains flag information (such as SYN and ACK flag settings) but may be overloaded by some data sources with additional data." flowLocation="1" eventLocation="0">
+    <subtype label="Flow_Flags" length="64" offset="0" datatype="uint64"/>
+  </type>
+  <type id="4456453" label="HTTP_Resp_Status" custom="F" indexed="F" datatype="3" description="Typically contains the Status of an HTTP request, but may be overloaded by some data sources with additional data." flowLocation="4" eventLocation="0">
+    <subtype label="HTTP_Resp_Status" length="64" offset="0" datatype="uint64"/>
+  </type>
+  <type id="4456454" label="HTTP_Resp_Length" custom="F" indexed="F" datatype="3" description="Typically contains the Length of an HTTP request but may be overloaded by some data sources with additional data." flowLocation="5" eventLocation="0">
+    <subtype label="HTTP_Resp_Length" length="64" offset="0" datatype="uint64"/>
+  </type>
+  <type id="4456455" label="HTTP_Resp_TTFByte" custom="F" indexed="F" datatype="3" description="Typically contains the IPFIX HTTP Response Time to First Byte but may be overloaded by some data sources with additional data." flowLocation="6" eventLocation="0">
+    <subtype label="HTTP_Resp_TTFByte" length="64" offset="0" datatype="uint64"/>
+  </type>
+  <type id="4456456" label="HTTP_Resp_TTLByte" custom="F" indexed="F" datatype="3" description="Typically contains the IPFIX HTTP Response Time to Last Byte but may be overloaded by some data sources with additional data." flowLocation="7" eventLocation="0">
+    <subtype label="HTTP_Resp_TTLByte" length="64" offset="0" datatype="uint64"/>
+  </type>
+  <type id="4456457" label="NTP_Offset_To_Monitor" custom="F" indexed="F" datatype="3" description="Typically contains a Network Time Protocol Offset but may be overloaded by some data sources with additional data." flowLocation="0" eventLocation="8">
+    <subtype label="NTP_Offset_To_Monitor" length="64" offset="0" datatype="uint64"/>
+  </type>
+  <type id="4456458" label="Confidence" custom="F" indexed="F" datatype="3" description="Typically contains a confidence value but may be overloaded by some data sources with additional data." flowLocation="0" eventLocation="8">
+    <subtype label="Confidence" length="64" offset="0" datatype="uint64"/>
+  </type>
+  <type id="4456459" label="Hops" custom="F" indexed="F" datatype="3" description="Typically contains the Number of hops taken from to reach a destination but may be overloaded by some data sources with additional data." flowLocation="0" eventLocation="8">
+    <subtype label="Hops" length="64" offset="0" datatype="uint64"/>
+  </type>
+  <type id="4456460" label="Priority" custom="F" indexed="F" datatype="3" description="Typically contains a Priority value but may be overloaded by some data sources with additional data." flowLocation="0" eventLocation="8">
+    <subtype label="Priority" length="64" offset="0" datatype="uint64"/>
+  </type>
+  <type id="4521985" label="Bytes_Received" custom="F" indexed="F" datatype="14" description="Typically contains a rolling total of bytes received from a device but may be overloaded by some data sources with additional data." flowLocation="0" eventLocation="2">
+    <subtype label="Bytes_Received" length="64" offset="0" datatype="float"/>
+  </type>
+  <type id="4521986" label="Bytes_Sent" custom="F" indexed="F" datatype="14" description="Typically contains a rolling total of bytes sent from a device but may be overloaded by some data sources with additional data." flowLocation="0" eventLocation="1">
+    <subtype label="Bytes_Sent" length="64" offset="0" datatype="float"/>
+  </type>
+  <type id="4521987" label="Count" custom="F" indexed="F" datatype="14" description="Typically contains a rolling count but may be overloaded by some data sources with additional data." flowLocation="0" eventLocation="3">
+    <subtype label="Count" length="64" offset="0" datatype="float"/>
+  </type>
+  <type id="4521988" label="Bytes_from_Client" custom="F" indexed="F" datatype="14" description="Typically contains a rolling total of bytes from a client but may be overloaded by some data sources with additional data." flowLocation="0" eventLocation="2">
+    <subtype label="Bytes_from_Client" length="64" offset="0" datatype="float"/>
+  </type>
+  <type id="4521989" label="Bytes_from_Server" custom="F" indexed="F" datatype="14" description="Typically contains a rolling total of bytes from a server but may be overloaded by some data sources with additional data." flowLocation="0" eventLocation="1">
+    <subtype label="Bytes_from_Server" length="64" offset="0" datatype="float"/>
+  </type>
+  <type id="4521990" label="Elapsed_Time" custom="F" indexed="F" datatype="14" description="Typically contains the amount of time elapsed during a process but may be overloaded by some data sources with additional data." flowLocation="0" eventLocation="3">
+    <subtype label="Elapsed_Time" length="64" offset="0" datatype="float"/>
+  </type>
+  <type id="4521991" label="Recipient_Count" custom="F" indexed="F" datatype="14" description="Typically contains the Number of recipients for an e-mail but may be overloaded by some data sources with additional data." flowLocation="0" eventLocation="3">
+    <subtype label="Recipient_Count" length="64" offset="0" datatype="float"/>
+  </type>
+  <type id="4521992" label="File_Size" custom="F" indexed="F" datatype="14" description="Typically contains a file size but may be overloaded by some data sources with additional data." flowLocation="0" eventLocation="3">
+    <subtype label="File_Size" length="64" offset="0" datatype="float"/>
+  </type>
+  <type id="4521993" label="Total_Bytes" custom="F" indexed="F" datatype="14" description="Total number of bytes." flowLocation="0" eventLocation="3">
+    <subtype label="Total_Bytes" length="64" offset="0" datatype="float"/>
+  </type>
+  <type id="4587521" label="DNS" custom="F" indexed="F" datatype="15" description="Typically contains a DNS Query but may be overloaded by some data sources with additional data." flowLocation="0" eventLocation="23">
+    <subtype label="Class" length="0" offset="1" datatype="kvstring"/>
+    <subtype label="Class_Name" length="0" offset="2" datatype="kvstring"/>
+    <subtype label="Type" length="0" offset="3" datatype="kvstring"/>
+    <subtype label="Type_Name" length="0" offset="4" datatype="kvstring"/>
+    <subtype label="Response_Code" length="0" offset="5" datatype="kvstring"/>
+    <subtype label="Response_Code_Name" length="0" offset="6" datatype="kvstring"/>
+    <subtype label="Query" length="0" offset="7" datatype="kvstring"/>
+  </type>
+  <type id="4587522" label="Registry" custom="F" indexed="F" datatype="15" description="Typically contains a registry key but may be overloaded by some data sources with additional data." flowLocation="0" eventLocation="26">
+    <subtype label="Key" length="0" offset="1" datatype="kvstring"/>
+    <subtype label="Value" length="0" offset="2" datatype="kvstring"/>
+  </type>
+  <type id="4587523" label="Old_Reputation" custom="F" indexed="F" datatype="15" description="Typically contains an old Threat Intelligence Exchange certificate but may be overloaded by some data sources with additional data." flowLocation="0" eventLocation="22">
+    <subtype label="GTI_File" length="0" offset="1" datatype="kvstring"/>
+    <subtype label="TIE_File" length="0" offset="2" datatype="kvstring"/>
+    <subtype label="ATD_File" length="0" offset="3" datatype="kvstring"/>
+    <subtype label="GTI_Cert" length="0" offset="4" datatype="kvstring"/>
+    <subtype label="TIE_Cert" length="0" offset="5" datatype="kvstring"/>
+  </type>
+  <type id="4587524" label="New_Reputation" custom="F" indexed="F" datatype="15" description="Typically contains a new threat intelligence exchange certificate but may be overloaded by some data sources with additional data." flowLocation="0" eventLocation="23">
+    <subtype label="GTI_File" length="0" offset="1" datatype="kvstring"/>
+    <subtype label="TIE_File" length="0" offset="2" datatype="kvstring"/>
+    <subtype label="ATD_File" length="0" offset="3" datatype="kvstring"/>
+    <subtype label="GTI_Cert" length="0" offset="4" datatype="kvstring"/>
+    <subtype label="TIE_Cert" length="0" offset="5" datatype="kvstring"/>
+  </type>
+  <type id="8388609" label="User" custom="T" indexed="T" datatype="0" description="" flowLocation="0" eventLocation="6">
+    <subtype label="User" length="64" offset="0" datatype="string"/>
+  </type>
+  <type id="8388610" label="Channel" custom="T" indexed="T" datatype="0" description="" flowLocation="0" eventLocation="6">
+    <subtype label="Channel" length="64" offset="0" datatype="string"/>
+  </type>
+  <type id="8388611" label="IntegrityLevel" custom="T" indexed="T" datatype="0" description="" flowLocation="0" eventLocation="8">
+    <subtype label="IntegrityLevel" length="64" offset="0" datatype="string"/>
+  </type>
+  <type id="8388612" label="Product" custom="T" indexed="T" datatype="0" description="" flowLocation="0" eventLocation="9">
+    <subtype label="Product" length="64" offset="0" datatype="string"/>
+  </type>
+  <type id="8388613" label="Description_" custom="T" indexed="T" datatype="0" description="" flowLocation="0" eventLocation="3">
+    <subtype label="Description_" length="64" offset="0" datatype="string"/>
+  </type>
+  <type id="8388614" label="RuleName" custom="T" indexed="T" datatype="0" description="" flowLocation="0" eventLocation="10">
+    <subtype label="RuleName" length="64" offset="0" datatype="string"/>
+  </type>
+  <type id="8388615" label="ImageName" custom="T" indexed="T" datatype="0" description="" flowLocation="0" eventLocation="5">
+    <subtype label="ImageName" length="64" offset="0" datatype="string"/>
+  </type>
+  <type id="8388616" label="ParentName" custom="T" indexed="T" datatype="0" description="" flowLocation="0" eventLocation="10">
+    <subtype label="ParentName" length="64" offset="0" datatype="string"/>
+  </type>
+  <type id="8388617" label="EventType" custom="T" indexed="T" datatype="0" description="" flowLocation="0" eventLocation="2">
+    <subtype label="EventType" length="64" offset="0" datatype="string"/>
+  </type>
+  <type id="8454151" label="des25" custom="T" indexed="T" datatype="7" description="" flowLocation="0" eventLocation="25">
+    <subtype label="des25" length="128" offset="0" datatype="sstring"/>
+  </type>
+  <type id="8454152" label="des24" custom="T" indexed="T" datatype="7" description="" flowLocation="0" eventLocation="24">
+    <subtype label="des24" length="128" offset="0" datatype="sstring"/>
+  </type>
+  <type id="8454153" label="des23" custom="T" indexed="T" datatype="7" description="" flowLocation="0" eventLocation="23">
+    <subtype label="des23" length="128" offset="0" datatype="sstring"/>
+  </type>
+  <type id="8454154" label="des22" custom="T" indexed="T" datatype="7" description="" flowLocation="0" eventLocation="22">
+    <subtype label="des22" length="128" offset="0" datatype="sstring"/>
+  </type>
+  <type id="8454155" label="des21" custom="T" indexed="T" datatype="7" description="" flowLocation="0" eventLocation="21">
+    <subtype label="des21" length="128" offset="0" datatype="sstring"/>
+  </type>
+  <type id="8454156" label="des26" custom="T" indexed="T" datatype="7" description="" flowLocation="0" eventLocation="26">
+    <subtype label="des26" length="128" offset="0" datatype="sstring"/>
+  </type>
+  <type id="8454157" label="des27" custom="T" indexed="T" datatype="7" description="" flowLocation="0" eventLocation="27">
+    <subtype label="des27" length="128" offset="0" datatype="sstring"/>
+  </type>
+  <type id="8454158" label="des10" custom="T" indexed="T" datatype="7" description="" flowLocation="0" eventLocation="10">
+    <subtype label="des10" length="64" offset="0" datatype="sstring"/>
+  </type>
+  <type id="8454159" label="des09" custom="T" indexed="T" datatype="7" description="" flowLocation="0" eventLocation="9">
+    <subtype label="des09" length="64" offset="0" datatype="sstring"/>
+  </type>
+  <type id="8454160" label="des08" custom="T" indexed="T" datatype="7" description="" flowLocation="0" eventLocation="8">
+    <subtype label="des08" length="64" offset="0" datatype="sstring"/>
+  </type>
+  <type id="8454161" label="des07" custom="T" indexed="T" datatype="7" description="" flowLocation="0" eventLocation="7">
+    <subtype label="des07" length="64" offset="0" datatype="sstring"/>
+  </type>
+  <type id="8454162" label="des06" custom="T" indexed="T" datatype="7" description="" flowLocation="0" eventLocation="6">
+    <subtype label="des06" length="64" offset="0" datatype="sstring"/>
+  </type>
+  <type id="8454163" label="des05" custom="T" indexed="T" datatype="7" description="" flowLocation="0" eventLocation="5">
+    <subtype label="des05" length="64" offset="0" datatype="sstring"/>
+  </type>
+  <type id="8454164" label="des04" custom="T" indexed="T" datatype="7" description="" flowLocation="0" eventLocation="4">
+    <subtype label="des04" length="64" offset="0" datatype="sstring"/>
+  </type>
+  <type id="8454165" label="des03" custom="T" indexed="T" datatype="7" description="" flowLocation="0" eventLocation="3">
+    <subtype label="des03" length="64" offset="0" datatype="sstring"/>
+  </type>
+  <type id="8454166" label="des02" custom="T" indexed="T" datatype="7" description="" flowLocation="0" eventLocation="2">
+    <subtype label="des02" length="64" offset="0" datatype="sstring"/>
+  </type>
+  <type id="8454167" label="des01" custom="T" indexed="T" datatype="7" description="" flowLocation="0" eventLocation="1">
+    <subtype label="des01" length="64" offset="0" datatype="sstring"/>
+  </type>
+  <type id="8454168" label="LogonId" custom="T" indexed="T" datatype="7" description="" flowLocation="0" eventLocation="8">
+    <subtype label="LogonId" length="64" offset="0" datatype="sstring"/>
+  </type>
+  <type id="8454169" label="MD5" custom="T" indexed="T" datatype="7" description="" flowLocation="0" eventLocation="21">
+    <subtype label="MD5" length="128" offset="0" datatype="sstring"/>
+  </type>
+  <type id="8454170" label="CommandLine" custom="T" indexed="T" datatype="7" description="" flowLocation="0" eventLocation="22">
+    <subtype label="CommandLine" length="128" offset="0" datatype="sstring"/>
+  </type>
+  <type id="8454174" label="StartAddress" custom="T" indexed="T" datatype="7" description="" flowLocation="0" eventLocation="27">
+    <subtype label="StartAddress" length="128" offset="0" datatype="sstring"/>
+  </type>
+  <type id="8454175" label="Imphash" custom="T" indexed="T" datatype="7" description="" flowLocation="0" eventLocation="21">
+    <subtype label="Imphash" length="128" offset="0" datatype="sstring"/>
+  </type>
+  <type id="8454177" label="ParentImage" custom="T" indexed="T" datatype="7" description="" flowLocation="0" eventLocation="23">
+    <subtype label="ParentImage" length="128" offset="0" datatype="sstring"/>
+  </type>
+  <type id="8454178" label="Image" custom="T" indexed="T" datatype="7" description="" flowLocation="0" eventLocation="24">
+    <subtype label="Image" length="128" offset="0" datatype="sstring"/>
+  </type>
+  <type id="8454179" label="ParentCommandLine" custom="T" indexed="T" datatype="7" description="" flowLocation="0" eventLocation="26">
+    <subtype label="ParentCommandLine" length="128" offset="0" datatype="sstring"/>
+  </type>
+  <type id="8650753" label="EventID" custom="T" indexed="T" datatype="3" description="" flowLocation="0" eventLocation="1">
+    <subtype label="EventID" length="64" offset="0" datatype="uint64"/>
+  </type>
+  <type id="8650754" label="ProcessID" custom="T" indexed="T" datatype="3" description="" flowLocation="0" eventLocation="2">
+    <subtype label="ProcessID" length="64" offset="0" datatype="uint64"/>
+  </type>
+  <type id="8650755" label="ThreadID" custom="T" indexed="T" datatype="3" description="" flowLocation="0" eventLocation="5">
+    <subtype label="ThreadID" length="64" offset="0" datatype="uint64"/>
+  </type>
+  <type id="8650756" label="ParentProcessID" custom="T" indexed="T" datatype="3" description="" flowLocation="0" eventLocation="10">
+    <subtype label="ParentProcessID" length="64" offset="0" datatype="uint64"/>
+  </type>
+  <type id="12845057" label="PreviousCreationTime" custom="T" indexed="F" datatype="17" description="" flowLocation="0" eventLocation="8">
+    <subtype label="PreviousCreationTime" length="64" offset="0" datatype="time8"/>
+  </type>
+  <type id="12845058" label="CurrentCreationTime" custom="T" indexed="F" datatype="17" description="" flowLocation="0" eventLocation="9">
+    <subtype label="CurrentCreationTime" length="64" offset="0" datatype="time8"/>
+  </type>
+</types>
