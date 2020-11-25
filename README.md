@@ -11,4 +11,4 @@ https://www.elastic.co/
 McAfee Event Receiver
 McAfee Enterprise Security Manager
 
-Basically, the idea is to install Winlogbeat onto your Windows Event Collection Server and send events to a Receiver.  From the receiver, a logstash instance is set up which will take the events and then forward it to itself voa Syslog(a source set up as 127.0.0.1).
+Basically, the idea is to install Winlogbeat onto your Windows Event Collection Server and send events to a Receiver.  From the receiver, a logstash instance is set up which will take the events and then forward it to itself via Syslog(a source set up as 127.0.0.1).
